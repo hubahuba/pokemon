@@ -1,0 +1,12 @@
+{
+  "extends": "@react-native/typescript-config/tsconfig.json",
+  "compilerOptions": {
+    "paths": {
+      "~/*": ["./app/*"],
+      "@/*": ["./core/*"],
+      "~atoms/*": ["./app/components/atoms/*"],
+      "~molecules/*": ["./app/components/molecules/*"],
+      "~organisms/*": ["./app/components/organisms/*"],
+    }
+  }
+}
