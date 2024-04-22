@@ -16,6 +16,7 @@ import {
 import request from 'graphql-request';
 import Config from 'react-native-config';
 import LocalStorage from '@/adapters/local-storage.ts';
+import crashlytics from '@react-native-firebase/crashlytics';
 
 const Pokemon: PokemonUseCaseProps = {
   getPokemon: (
@@ -55,6 +56,10 @@ const Pokemon: PokemonUseCaseProps = {
       pokemonData = pokemons?.reduce((r, e) => (r.push(...e), r), []);
     }
 
+    if (query.error) {
+      crashlytics().recordError(query.error, 'useInfiniteQuery-getPokemons');
+    }
+
     // @ts-ignore
     return {
       ...query,
@@ -87,6 +92,10 @@ const Pokemon: PokemonUseCaseProps = {
 
     if (data) {
       LocalStorage.setItem('berries', JSON.stringify(data));
+    }
+
+    if (error) {
+      crashlytics().recordError(error, 'useQuery-getBerries');
     }
 
     return {

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "962501404293",
+    "project_id": "utomo-pokemon",
+    "storage_bucket": "utomo-pokemon.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:962501404293:android:632470f803c363d4476bec",
+        "android_client_info": {
+          "package_name": "com.pokemon"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBeOfhXqQGTwyJnLWrV6nG47HBMEzo8DCs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
