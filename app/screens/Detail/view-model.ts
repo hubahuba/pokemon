@@ -3,26 +3,14 @@ import {Popup} from 'react-native-popup-confirm-toast';
 import {StackNavigation, RootStackParamList} from '~/routes/routes';
 import {DetailViewModelProps} from './Detail';
 import services from '@/services.ts';
-import {BerryData, QuerySearch} from '@/definitions/usecases/pokemon';
-import {useEffect, useState} from 'react';
-import {filterMapper, pokemonDataMapper} from '@/utils';
-import {useInfiniteQuery, useMutation} from '@tanstack/react-query';
-import request from 'graphql-request';
-import {pokeAPIQueryDocument} from '@/data/pokemons.ts';
+import {BerryData} from '@/definitions/usecases/pokemon';
+import {useState} from 'react';
 
 export default function ViewModel(): DetailViewModelProps {
   const route = useRoute<RouteProp<RootStackParamList, 'Detail'>>();
   const navigation = useNavigation<StackNavigation>();
   const [showBerry, setShowBerry] = useState(false);
-  const [nextId, setNextId] = useState<number>();
   const {data} = route.params;
-
-  // useEffect(() => {
-  //   if (nextId !== undefined) {
-  //     const query = services.useCase.pokemon.getPokemon(0, 1, nextId, 'DETAIL');
-  //     console.log('useEffect', query.data);
-  //   }
-  // }, [nextId]);
 
   let berries: BerryData[] | string | undefined =
     services.storage.getItem('berries');
@@ -79,27 +67,12 @@ export default function ViewModel(): DetailViewModelProps {
     }
   };
 
-  const evolutionPokemon = ({pokemonId}: {pokemonId: number}) => {
-    console.log('mutated', pokemonId);
-    // const {data} = services.useCase.pokemon.getPokemon(0, 1, pokemonId);
-    // setNextId(pokemonId);
-    // if (pokemon) {
-    //   navigation.navigate('Detail', {data: pokemon});
-    // }
-    const filter: QuerySearch = filterMapper(0, 1, pokemonId);
-    console.log('mutated', pokemonId, filter, request);
-    return request(services.config.API_URL, pokeAPIQueryDocument, filter);
-    // console.log(resp);
-    // const pokemons = pokemonDataMapper(resp);
-    // return pokemons[0];
+  const evolutionPokemon = ({pokemonId}: {pokemonId: string}) => {
+    const current = services.useCase.gameAction.evolutionPokemon(pokemonId);
+    if (current) {
+      navigation.navigate('Detail', {data: current});
+    }
   };
-
-  const mutation = useMutation({
-    mutationFn: evolutionPokemon,
-    onSuccess: (data) => {
-      console.log(data);
-    },
-  });
 
   return {
     data,
@@ -110,6 +83,6 @@ export default function ViewModel(): DetailViewModelProps {
     showBerry,
     setShowBerry,
     feedPokemon,
-    evolutionPokemon: mutation.mutate,
+    evolutionPokemon: evolutionPokemon,
   };
 }

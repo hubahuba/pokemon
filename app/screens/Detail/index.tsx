@@ -61,7 +61,7 @@ function Detail() {
                 maxWeight={maxWeight}
                 stats={stats}
                 owned={owned}
-                ownedId={nextEvolution ? nextEvolution[0].id : undefined}
+                ownedId={ownedId}
                 onDeletePokemon={deletePokemon}
                 onEvolution={currentOwnedId =>
                   evolutionPokemon({pokemonId: currentOwnedId})

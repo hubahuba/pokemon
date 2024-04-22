@@ -9,7 +9,7 @@ export interface DetailViewModelProps {
   deletePokemon: () => void;
   berries?: BerryData[] | string;
   feedPokemon: (ownedId: string, berry: BerryData) => void;
-  evolutionPokemon: ({pokemonId}: {pokemonId: number}) => void;
+  evolutionPokemon: ({pokemonId}: {pokemonId: string}) => void;
   setShowBerry: (show: boolean) => void;
   showBerry: boolean;
 }
@@ -20,9 +20,9 @@ export interface StatViewProps {
   maxWeight?: number | null;
   stats: PokemonStat[];
   owned?: boolean;
-  ownedId?: number;
+  ownedId?: string;
   onDeletePokemon?: () => void;
-  onEvolution?: (ownedId: number) => void;
+  onEvolution?: (ownedId: string) => void;
 }
 
 export interface PokemonBerriesProps {

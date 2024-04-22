@@ -78,7 +78,7 @@ const GameAction: GameActionUseCase = {
       if (currentPokemon) {
         if (currentPokemon.nextEvolution) {
           const nextEvo = [...currentPokemon.nextEvolution];
-          const current = nextEvo.shift();
+          const current: PokemonData = nextEvo.shift();
           current.owned = currentPokemon.owned;
           current.ownedId = currentPokemon.ownedId;
           const nextOfNextEvo = findNextWeight(current, nextEvo);
