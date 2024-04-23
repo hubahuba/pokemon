@@ -37,6 +37,14 @@ export const pokeAPIQueryDocument: TypedDocumentNode<
               pokemon_v2_pokemonsprites {
                 sprites(path: "other.official-artwork.front_default")
               }
+              pokemon_v2_pokemonstats {
+                pokemon_v2_stat {
+                  pokemon_v2_statnames(where: {language_id: {_eq: 9}}) {
+                    name
+                  }
+                }
+                base_stat
+              }
             }
           }
         }

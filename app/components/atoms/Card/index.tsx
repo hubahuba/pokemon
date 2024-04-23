@@ -6,7 +6,7 @@ const Card = ({children, ...props}: TouchableOpacityProps) => {
   return (
     <TouchableOpacity
       {...props}
-      className="border rounded border-gray-300 dark:bg-slate-800 ml-4 mt-4">
+      className="border rounded border-gray-300 ml-4 mt-4">
       <View className="bg-gray-200 p-2">{children}</View>
     </TouchableOpacity>
   );

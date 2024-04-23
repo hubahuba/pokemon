@@ -2,7 +2,7 @@ import {GameActionUseCase} from '@/definitions/usecases/game-action';
 import {PokemonData} from '@/definitions/usecases/pokemon';
 import LocalStorage from '@/adapters/local-storage.ts';
 import {v4 as uuid} from 'uuid';
-import {findNextWeight, getBerryScore} from '@/utils';
+import {getBerryScore} from '@/utils';
 
 const GameAction: GameActionUseCase = {
   iChooseYou: data => {
@@ -75,30 +75,20 @@ const GameAction: GameActionUseCase = {
       let currentPokemon = pokemons.find(
         pokemon => pokemon.ownedId === pokemonId,
       );
-      if (currentPokemon) {
-        if (currentPokemon.nextEvolution) {
-          const nextEvo = [...currentPokemon.nextEvolution];
-          const current: PokemonData = nextEvo.shift();
-          current.owned = currentPokemon.owned;
-          current.ownedId = currentPokemon.ownedId;
-          const nextOfNextEvo = findNextWeight(current, nextEvo);
-          if (nextOfNextEvo.length > 0 && nextOfNextEvo[0].id !== current.id) {
-            current.nextEvolution = nextOfNextEvo;
-            current.maxWeight = nextOfNextEvo[0].baseWeight;
-          } else {
-            current.maxWeight = current.baseWeight;
-          }
+      if (currentPokemon && currentPokemon.nextEvolution) {
+        const nextEvo = [...currentPokemon.nextEvolution];
 
-          const filtered = pokemons.filter(
-            pokemon => pokemon.ownedId !== pokemonId,
-          );
-          filtered.push(current);
-          LocalStorage.setItem('my-pokemons', JSON.stringify(filtered));
+        const current: PokemonData = nextEvo.shift();
+        current.owned = currentPokemon.owned;
+        current.ownedId = currentPokemon.ownedId;
 
-          return current;
-        }
+        const filtered = pokemons.filter(
+          pokemon => pokemon.ownedId !== pokemonId,
+        );
+        filtered.push(current);
+        LocalStorage.setItem('my-pokemons', JSON.stringify(filtered));
 
-        return currentPokemon;
+        return current;
       }
       return currentPokemon;
     }

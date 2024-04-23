@@ -41,7 +41,7 @@ function Routes() {
           <Progress.Bar
             width={null}
             indeterminate={true}
-            height={1}
+            height={3}
             borderWidth={0}
           />
         )}

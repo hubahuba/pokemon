@@ -25,7 +25,6 @@ const Pokemon: PokemonUseCaseProps = {
     search,
   ): UseInfiniteQueryResult<PokemonData[] | undefined> => {
     const filter: QuerySearch = filterMapper(offset, limit, search);
-
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const query = useInfiniteQuery({
       queryKey: ['getPokemons', filter],

@@ -57872,6 +57872,17 @@ export type PokeApiQueryQuery = {
               __typename?: 'pokemon_v2_pokemonsprites';
               sprites: any;
             }>;
+            pokemon_v2_pokemonstats: Array<{
+              __typename?: 'pokemon_v2_pokemonstat';
+              base_stat: number;
+              pokemon_v2_stat?: {
+                __typename?: 'pokemon_v2_stat';
+                pokemon_v2_statnames: Array<{
+                  __typename?: 'pokemon_v2_statname';
+                  name: string;
+                }>;
+              } | null;
+            }>;
           }>;
         }>;
       } | null;
@@ -58193,6 +58204,97 @@ export const PokeApiQueryDocument = {
                                                     },
                                                   },
                                                 ],
+                                              },
+                                            ],
+                                          },
+                                        },
+                                        {
+                                          kind: 'Field',
+                                          name: {
+                                            kind: 'Name',
+                                            value: 'pokemon_v2_pokemonstats',
+                                          },
+                                          selectionSet: {
+                                            kind: 'SelectionSet',
+                                            selections: [
+                                              {
+                                                kind: 'Field',
+                                                name: {
+                                                  kind: 'Name',
+                                                  value: 'pokemon_v2_stat',
+                                                },
+                                                selectionSet: {
+                                                  kind: 'SelectionSet',
+                                                  selections: [
+                                                    {
+                                                      kind: 'Field',
+                                                      name: {
+                                                        kind: 'Name',
+                                                        value:
+                                                          'pokemon_v2_statnames',
+                                                      },
+                                                      arguments: [
+                                                        {
+                                                          kind: 'Argument',
+                                                          name: {
+                                                            kind: 'Name',
+                                                            value: 'where',
+                                                          },
+                                                          value: {
+                                                            kind: 'ObjectValue',
+                                                            fields: [
+                                                              {
+                                                                kind: 'ObjectField',
+                                                                name: {
+                                                                  kind: 'Name',
+                                                                  value:
+                                                                    'language_id',
+                                                                },
+                                                                value: {
+                                                                  kind: 'ObjectValue',
+                                                                  fields: [
+                                                                    {
+                                                                      kind: 'ObjectField',
+                                                                      name: {
+                                                                        kind: 'Name',
+                                                                        value:
+                                                                          '_eq',
+                                                                      },
+                                                                      value: {
+                                                                        kind: 'IntValue',
+                                                                        value:
+                                                                          '9',
+                                                                      },
+                                                                    },
+                                                                  ],
+                                                                },
+                                                              },
+                                                            ],
+                                                          },
+                                                        },
+                                                      ],
+                                                      selectionSet: {
+                                                        kind: 'SelectionSet',
+                                                        selections: [
+                                                          {
+                                                            kind: 'Field',
+                                                            name: {
+                                                              kind: 'Name',
+                                                              value: 'name',
+                                                            },
+                                                          },
+                                                        ],
+                                                      },
+                                                    },
+                                                  ],
+                                                },
+                                              },
+                                              {
+                                                kind: 'Field',
+                                                name: {
+                                                  kind: 'Name',
+                                                  value: 'base_stat',
+                                                },
                                               },
                                             ],
                                           },

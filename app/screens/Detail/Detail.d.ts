@@ -23,10 +23,11 @@ export interface StatViewProps {
   ownedId?: string;
   onDeletePokemon?: () => void;
   onEvolution?: (ownedId: string) => void;
+  nextEvolution?: PokemonData[];
 }
 
 export interface PokemonBerriesProps {
-  ownedId: string;
+  ownedId?: string;
   data: BerryData[];
   onCloseBerry?: () => void;
   onSelectBerry?: (ownedId: string, berri: BerryData) => void;

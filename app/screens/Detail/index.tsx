@@ -31,10 +31,9 @@ function Detail() {
       stats,
       owned,
       maxWeight,
-      nextEvolution,
       ownedId,
+      nextEvolution,
     } = data as PokemonData;
-
     return (
       <ImageBackground
         className="items-center min-h-screen"
@@ -54,15 +53,16 @@ function Detail() {
               source={{uri: image}}
               style={{width: 340, height: 340}}
             />
-            {stats && (
+            {stats?.length && (
               <StatView
                 name={name}
                 weight={owned === true ? currentWeight : baseWeight}
-                maxWeight={maxWeight}
+                maxWeight={maxWeight ?? baseWeight}
                 stats={stats}
                 owned={owned}
                 ownedId={ownedId}
                 onDeletePokemon={deletePokemon}
+                nextEvolution={nextEvolution}
                 onEvolution={currentOwnedId =>
                   evolutionPokemon({pokemonId: currentOwnedId})
                 }
@@ -74,7 +74,7 @@ function Detail() {
             <PokemonBerries
               onCloseBerry={() => setShowBerry(false)}
               data={berries as BerryData[]}
-              ownedId={ownedId as string}
+              ownedId={ownedId}
               onSelectBerry={feedPokemon}
             />
           )}
@@ -88,7 +88,7 @@ function Detail() {
             </View>
           )}
 
-          {owned && (
+          {!showBerry && owned && nextEvolution && nextEvolution.length > 0 && (
             <Animated.View
               entering={FadeInUp}
               exiting={FadeOutDown}

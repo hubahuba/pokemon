@@ -16,7 +16,6 @@ function ViewModel(): SplashViewModel {
       });
     }, 500);
   }
-  console.log(error);
 
   return {data, isFetching, isFetched};
 }

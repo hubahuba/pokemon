@@ -11,13 +11,13 @@ const PokemonCard = memo(function PokemonCard({
   ...touchProps
 }: PokemonCardProps) {
   return (
-    <Card {...touchProps} className="ml-4 mt-4">
+    <Card {...touchProps} className="ml-4 mt-4 bg-gray-100">
       <FastImage
         defaultSource={require('~/assets/images/pokeball.png')}
         style={{width: 140, height: 140}}
         source={{uri: image}}
       />
-      <Text className="text-slate-800 dark:text-white font-[Raleway-Regular] text-md">
+      <Text className="text-slate-800 font-[Raleway-Regular] text-md">
         {name}
       </Text>
     </Card>

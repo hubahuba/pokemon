@@ -13,11 +13,12 @@ export default function StatView({
   ownedId,
   onDeletePokemon,
   onEvolution,
+  nextEvolution,
 }: StatViewProps) {
   return (
     <View className="bg-gray-100 p-4 rounded w-full">
       <View className="flex border-b-gray-300 border-b pb-1 mb-2 items-center">
-        {owned && (
+        {!!owned && (
           <IconButton
             color="#FF0000"
             className="absolute top-2 right-0"
@@ -25,7 +26,9 @@ export default function StatView({
             onPress={() => onDeletePokemon?.()}
           />
         )}
-        <Text className="font-[Raleway-Bold] text-[28px]">{name}</Text>
+        <Text className="text-slate-600 font-[Raleway-Bold] text-[28px]">
+          {name}
+        </Text>
       </View>
       <View className="w-full">
         {stats.map(stat => {
@@ -38,7 +41,9 @@ export default function StatView({
             </View>
           );
         })}
-        {(weight as number) >= (maxWeight as number) && ownedId ? (
+        {(weight as number) >= (maxWeight as number) &&
+        nextEvolution?.length &&
+        ownedId !== undefined ? (
           <View>
             <TouchableOpacity
               onPress={() => {
@@ -56,7 +61,7 @@ export default function StatView({
           <View>
             <PokemonStatText
               name="Weight"
-              value={(weight as number) / (maxWeight as number)}
+              value={(weight as number) / (maxWeight ?? (weight as number))}
             />
           </View>
         )}

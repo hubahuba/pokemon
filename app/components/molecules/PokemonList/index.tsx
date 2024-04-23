@@ -6,8 +6,8 @@ import {PokemonData} from '@/definitions/usecases/pokemon';
 
 function Index({data, onEndReach, onPressCard}: Readonly<PokemonListProps>) {
   return (
-    <View className="pt-4 pb-4">
-      <View className="flex flex-row flex-wrap items-start">
+    <View>
+      <View className="flex flex-row flex-wrap justify-center items-start">
         <FlatList
           data={data as PokemonData[]}
           numColumns={2}
@@ -21,9 +21,6 @@ function Index({data, onEndReach, onPressCard}: Readonly<PokemonListProps>) {
           keyExtractor={item => item.ownedId || String(item.id)}
           columnWrapperStyle={{
             justifyContent: 'center',
-            alignItems: 'flex-start',
-            marginLeft: -4,
-            marginTop: -4,
           }}
           onEndReachedThreshold={0.3}
           onEndReached={() => onEndReach?.()}

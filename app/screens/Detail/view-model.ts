@@ -68,6 +68,7 @@ export default function ViewModel(): DetailViewModelProps {
   };
 
   const evolutionPokemon = ({pokemonId}: {pokemonId: string}) => {
+    setShowBerry(false);
     const current = services.useCase.gameAction.evolutionPokemon(pokemonId);
     if (current) {
       navigation.navigate('Detail', {data: current});

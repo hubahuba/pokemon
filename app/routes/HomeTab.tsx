@@ -8,7 +8,7 @@ const Tab = createMaterialTopTabNavigator();
 
 export default function HomeTab() {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator className="dark:bg-slate-800">
       <Tab.Screen name="Home" component={Home} />
       <Tab.Screen name="My Pokemon" component={MyPokemon} />
     </Tab.Navigator>

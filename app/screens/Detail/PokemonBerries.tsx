@@ -6,19 +6,12 @@ import Animated, {
   interpolate,
 } from 'react-native-reanimated';
 import Carousel from 'react-native-reanimated-carousel';
-import {
-  TouchableOpacity,
-  GestureHandlerRootView,
-} from 'react-native-gesture-handler';
-import FastImage from 'react-native-fast-image';
+import {GestureHandlerRootView} from 'react-native-gesture-handler';
 
 import IconButton from '~atoms/IconButton';
 import {PokemonBerriesProps} from '~/screens/Detail/Detail';
-import services from '@/services.ts';
-import {memo} from 'react';
-
-const PAGE_WIDTH = services.util.window.width;
-const CAROUSEL_WIDTH = PAGE_WIDTH - PAGE_WIDTH * (13 / 100);
+import {memo, useState} from 'react';
+import BerryButton from '~atoms/BerryButton';
 
 const PokemonBerries = memo(function PokemonBerries({
   data,
@@ -26,8 +19,10 @@ const PokemonBerries = memo(function PokemonBerries({
   onSelectBerry,
   ownedId,
 }: PokemonBerriesProps) {
-  const itemSize = 60;
-  const centerOffset = CAROUSEL_WIDTH / 2 - itemSize / 2;
+  const [viewWidth, setViewWidth] = useState(0);
+  const itemSize = 80;
+  const iconSize = 34;
+  const centerOffset = viewWidth / 2 - itemSize / 2;
 
   const animationStyle = React.useCallback(
     (value: number) => {
@@ -36,7 +31,7 @@ const PokemonBerries = memo(function PokemonBerries({
       const itemGap = interpolate(
         value,
         [-3, -2, -1, 0, 1, 2, 3],
-        [-30, -15, 0, 0, 0, 15, 30],
+        [-30, -10, 0, 0, 0, 10, 30],
       );
 
       const translateX =
@@ -46,8 +41,8 @@ const PokemonBerries = memo(function PokemonBerries({
 
       const translateY = interpolate(
         value,
-        [-1, -0.3, 0, 0.3, 1],
-        [60, 45, 40, 45, 60],
+        [-1, -0.3, 0, 0.4, 1],
+        [50, 35, 30, 35, 50],
       );
 
       const scale = interpolate(
@@ -71,41 +66,43 @@ const PokemonBerries = memo(function PokemonBerries({
     [centerOffset],
   );
 
+  if (!ownedId) {
+    return <View />;
+  }
+
   return (
-    <Animated.View entering={FadeInUp} exiting={FadeOutDown}>
+    <Animated.View
+      onLayout={event => {
+        const {width} = event.nativeEvent.layout;
+        setViewWidth(width);
+      }}
+      entering={FadeInUp}
+      exiting={FadeOutDown}>
       <GestureHandlerRootView>
         <Carousel
           width={itemSize}
           height={itemSize}
           style={{
-            width: CAROUSEL_WIDTH,
-            height: PAGE_WIDTH / 2 + 20,
+            width: '100%',
+            height: viewWidth / 2,
           }}
           loop
           autoPlay={false}
           data={data}
           renderItem={({item}) => (
-            <TouchableOpacity
-              key={item.id}
-              onPress={() => {
-                onSelectBerry?.(ownedId, item);
-              }}
-              style={{height: '100%', width: '100%'}}>
-              <View className="flex flex-1 p-0.5 rounded-full bg-gray-100 justify-center items-center overflow-hidden">
-                <FastImage
-                  className="w-full h-full"
-                  source={{uri: item.image}}
-                />
-              </View>
-            </TouchableOpacity>
+            <BerryButton
+              item={item}
+              onSelectBerry={onSelectBerry}
+              ownedId={ownedId}
+            />
           )}
           customAnimation={animationStyle}
         />
         <IconButton
           className="absolute rounded-full bg-gray-400 p-1 border border-gray-500"
           style={{
-            top: CAROUSEL_WIDTH / 2 - 60,
-            left: CAROUSEL_WIDTH / 2 - 15,
+            top: viewWidth / 2 - iconSize,
+            left: viewWidth / 2 - iconSize / 2,
           }}
           iconName="close"
           onPress={onCloseBerry}
