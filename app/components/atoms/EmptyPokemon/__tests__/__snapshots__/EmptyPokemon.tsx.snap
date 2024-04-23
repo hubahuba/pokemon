@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Card correctly 1`] = `
+<View
+  accessibilityIgnoresInvertColors={true}
+  style={
+    [
+      {
+        "minHeight": 1334,
+      },
+      {
+        "alignItems": "center",
+      },
+      {
+        "paddingLeft": 16,
+        "paddingRight": 16,
+      },
+    ]
+  }
+>
+  <Image
+    resizeMode="contain"
+    source={
+      {
+        "testUri": "../../../app/assets/images/sad.jpg",
+      }
+    }
+    style={
+      [
+        {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        {
+          "height": undefined,
+          "width": undefined,
+        },
+        undefined,
+      ]
+    }
+  />
+  <Text
+    style={
+      [
+        {
+          "fontFamily": "Raleway-SemiBold",
+        },
+        {
+          "fontSize": 28,
+        },
+        {
+          "marginTop": 170,
+        },
+        {
+          "color": "#475569",
+        },
+        {
+          "textAlign": "center",
+        },
+      ]
+    }
+  >
+    testing
+  </Text>
+</View>
+`;

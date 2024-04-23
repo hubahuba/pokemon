@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Card correctly 1`] = `
+<View
+  style={
+    [
+      {
+        "display": "flex",
+      },
+      {
+        "flexDirection": "row",
+      },
+    ]
+  }
+>
+  <View
+    style={
+      [
+        {
+          "flexBasis": 130,
+        },
+        {
+          "alignItems": "flex-end",
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        [
+          {
+            "color": "#475569",
+          },
+          {
+            "fontSize": 16,
+          },
+          {
+            "fontFamily": "Raleway-Medium",
+          },
+        ]
+      }
+    >
+      test stat
+    </Text>
+  </View>
+  <View
+    style={
+      [
+        {
+          "flexGrow": 1,
+        },
+        {
+          "justifyContent": "center",
+        },
+        [
+          {
+            "marginLeft": 8,
+          },
+        ],
+      ]
+    }
+  >
+    <View
+      animated={true}
+      animationConfig={
+        {
+          "bounciness": 0,
+        }
+      }
+      animationType="spring"
+      indeterminate={false}
+      indeterminateAnimationDuration={1000}
+      onLayout={[Function]}
+      progress={2}
+      style={
+        [
+          {
+            "backgroundColor": undefined,
+            "borderColor": "rgba(0, 122, 255, 1)",
+            "borderRadius": 2,
+            "borderWidth": 1,
+            "overflow": "hidden",
+            "width": 190,
+          },
+          undefined,
+        ]
+      }
+      useNativeDriver={false}
+    >
+      <View
+        collapsable={false}
+        style={
+          {
+            "backgroundColor": "rgba(0, 122, 255, 1)",
+            "height": 6,
+            "transform": [
+              {
+                "translateX": 0,
+              },
+              {
+                "translateX": 0,
+              },
+              {
+                "scaleX": 1,
+              },
+            ],
+          }
+        }
+      />
+    </View>
+  </View>
+</View>
+`;

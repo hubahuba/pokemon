@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {ImageBackground, Text} from 'react-native';
-import {EmptyPokemonProps} from '~molecules/EmptyPokemon/EmptyPokemon';
+import {EmptyPokemonProps} from '~atoms//EmptyPokemon/EmptyPokemon';
 
 export default function EmptyPokemon({message}: EmptyPokemonProps) {
   return (

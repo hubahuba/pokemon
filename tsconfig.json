@@ -8,5 +8,6 @@
       "~molecules/*": ["./app/components/molecules/*"],
       "~organisms/*": ["./app/components/organisms/*"],
     }
-  }
+  },
+  "allowSyntheticDefaultImports": true
 }

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import PokemonList from '~molecules/PokemonList';
 import ViewModel from '~/screens/Home/view-model.ts';
-import EmptyPokemon from '~molecules/EmptyPokemon';
+import EmptyPokemon from '~atoms//EmptyPokemon';
 import {View} from 'react-native';
 
 function Home() {
