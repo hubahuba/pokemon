@@ -1,31 +1,44 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 import PokemonList from '../index';
-import {PokemonData} from '@/definitions/usecases/pokemon';
+import {dataPokemon} from '@/__mocks__/constanta.ts';
+import {
+  render,
+  screen,
+  act,
+  fireEvent,
+  waitFor,
+} from '@testing-library/react-native';
 
-it('renders Card correctly', () => {
-  const dummyPokemon: PokemonData[] = [
-    {
-      id: 1,
-      name: 'pokemon',
-      baseWeight: 10,
-      currentWeight: 10,
-      maxWeight: 10,
-      nextEvolution: [],
-      image: 'poke-image',
-      order: 1,
-      stats: [
-        {
-          name: 'stat',
-          value: 12,
-        },
-      ],
-      evolutions: [],
-      lastEat: 'soft',
-      owned: false,
-    },
-  ];
+const mockPressCard = jest.fn();
+const mockEncScroll = jest.fn();
 
-  const tree = renderer.create(<PokemonList data={dummyPokemon} />).toJSON();
-  expect(tree).toMatchSnapshot();
+describe('PokemonBerries', () => {
+  beforeEach(() => {
+    render(
+      <PokemonList
+        data={dataPokemon}
+        onPressCard={mockPressCard}
+        onEndReach={mockEncScroll}
+      />,
+    );
+  });
+
+  it('renders PokemonList correctly', () => {
+    const tree = screen.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  test('PokemonList pressed card', async () => {
+    const button = screen.getByTestId('PokemonCard-Bulbasaur');
+    fireEvent.press(button);
+    await waitFor(() => expect(mockPressCard.mock.calls.length).toBe(1));
+  });
+
+  test('PokemonList scrooled card', async () => {
+    const list = screen.getByTestId('PokemonListContainer');
+    await act(async () => {
+      fireEvent(list, 'onEndReached');
+    });
+    await waitFor(() => expect(mockEncScroll.mock.calls.length).toBe(1));
+  });
 });

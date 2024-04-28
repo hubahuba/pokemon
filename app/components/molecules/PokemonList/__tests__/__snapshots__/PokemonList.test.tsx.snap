@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders Card correctly 1`] = `
+exports[`PokemonBerries renders PokemonList correctly 1`] = `
 <View>
   <View
     style={
@@ -27,21 +27,877 @@ exports[`renders Card correctly 1`] = `
       data={
         [
           {
-            "baseWeight": 10,
-            "currentWeight": 10,
-            "evolutions": [],
+            "baseWeight": 69,
+            "currentWeight": 69,
+            "evolutions": [
+              {
+                "baseWeight": 69,
+                "currentWeight": 69,
+                "evolutions": [
+                  {
+                    "baseWeight": 69,
+                    "currentWeight": 69,
+                    "id": 1,
+                    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
+                    "name": "Bulbasaur",
+                    "order": 1,
+                    "stats": [
+                      {
+                        "name": "HP",
+                        "value": 45,
+                      },
+                      {
+                        "name": "Attack",
+                        "value": 49,
+                      },
+                      {
+                        "name": "Defense",
+                        "value": 49,
+                      },
+                      {
+                        "name": "Special Attack",
+                        "value": 65,
+                      },
+                      {
+                        "name": "Special Defense",
+                        "value": 65,
+                      },
+                      {
+                        "name": "Speed",
+                        "value": 45,
+                      },
+                    ],
+                  },
+                  {
+                    "baseWeight": 130,
+                    "currentWeight": 130,
+                    "id": 2,
+                    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png",
+                    "name": "Ivysaur",
+                    "order": 2,
+                    "stats": [
+                      {
+                        "name": "HP",
+                        "value": 60,
+                      },
+                      {
+                        "name": "Attack",
+                        "value": 62,
+                      },
+                      {
+                        "name": "Defense",
+                        "value": 63,
+                      },
+                      {
+                        "name": "Special Attack",
+                        "value": 80,
+                      },
+                      {
+                        "name": "Special Defense",
+                        "value": 80,
+                      },
+                      {
+                        "name": "Speed",
+                        "value": 60,
+                      },
+                    ],
+                  },
+                  {
+                    "baseWeight": 1000,
+                    "currentWeight": 1000,
+                    "id": 3,
+                    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/3.png",
+                    "name": "Venusaur",
+                    "order": 3,
+                    "stats": [
+                      {
+                        "name": "HP",
+                        "value": 80,
+                      },
+                      {
+                        "name": "Attack",
+                        "value": 82,
+                      },
+                      {
+                        "name": "Defense",
+                        "value": 83,
+                      },
+                      {
+                        "name": "Special Attack",
+                        "value": 100,
+                      },
+                      {
+                        "name": "Special Defense",
+                        "value": 100,
+                      },
+                      {
+                        "name": "Speed",
+                        "value": 80,
+                      },
+                    ],
+                  },
+                ],
+                "id": 1,
+                "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
+                "maxWeight": 130,
+                "name": "Bulbasaur",
+                "nextEvolution": [
+                  {
+                    "baseWeight": 130,
+                    "currentWeight": 130,
+                    "id": 2,
+                    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png",
+                    "name": "Ivysaur",
+                    "order": 2,
+                    "stats": [
+                      {
+                        "name": "HP",
+                        "value": 60,
+                      },
+                      {
+                        "name": "Attack",
+                        "value": 62,
+                      },
+                      {
+                        "name": "Defense",
+                        "value": 63,
+                      },
+                      {
+                        "name": "Special Attack",
+                        "value": 80,
+                      },
+                      {
+                        "name": "Special Defense",
+                        "value": 80,
+                      },
+                      {
+                        "name": "Speed",
+                        "value": 60,
+                      },
+                    ],
+                  },
+                  {
+                    "baseWeight": 1000,
+                    "currentWeight": 1000,
+                    "id": 3,
+                    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/3.png",
+                    "name": "Venusaur",
+                    "order": 3,
+                    "stats": [
+                      {
+                        "name": "HP",
+                        "value": 80,
+                      },
+                      {
+                        "name": "Attack",
+                        "value": 82,
+                      },
+                      {
+                        "name": "Defense",
+                        "value": 83,
+                      },
+                      {
+                        "name": "Special Attack",
+                        "value": 100,
+                      },
+                      {
+                        "name": "Special Defense",
+                        "value": 100,
+                      },
+                      {
+                        "name": "Speed",
+                        "value": 80,
+                      },
+                    ],
+                  },
+                ],
+                "order": 1,
+                "stats": [
+                  {
+                    "name": "HP",
+                    "value": 45,
+                  },
+                  {
+                    "name": "Attack",
+                    "value": 49,
+                  },
+                  {
+                    "name": "Defense",
+                    "value": 49,
+                  },
+                  {
+                    "name": "Special Attack",
+                    "value": 65,
+                  },
+                  {
+                    "name": "Special Defense",
+                    "value": 65,
+                  },
+                  {
+                    "name": "Speed",
+                    "value": 45,
+                  },
+                ],
+              },
+              {
+                "baseWeight": 130,
+                "currentWeight": 130,
+                "evolutions": [
+                  {
+                    "baseWeight": 69,
+                    "currentWeight": 69,
+                    "id": 1,
+                    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
+                    "name": "Bulbasaur",
+                    "order": 1,
+                    "stats": [
+                      {
+                        "name": "HP",
+                        "value": 45,
+                      },
+                      {
+                        "name": "Attack",
+                        "value": 49,
+                      },
+                      {
+                        "name": "Defense",
+                        "value": 49,
+                      },
+                      {
+                        "name": "Special Attack",
+                        "value": 65,
+                      },
+                      {
+                        "name": "Special Defense",
+                        "value": 65,
+                      },
+                      {
+                        "name": "Speed",
+                        "value": 45,
+                      },
+                    ],
+                  },
+                  {
+                    "baseWeight": 130,
+                    "currentWeight": 130,
+                    "id": 2,
+                    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png",
+                    "name": "Ivysaur",
+                    "order": 2,
+                    "stats": [
+                      {
+                        "name": "HP",
+                        "value": 60,
+                      },
+                      {
+                        "name": "Attack",
+                        "value": 62,
+                      },
+                      {
+                        "name": "Defense",
+                        "value": 63,
+                      },
+                      {
+                        "name": "Special Attack",
+                        "value": 80,
+                      },
+                      {
+                        "name": "Special Defense",
+                        "value": 80,
+                      },
+                      {
+                        "name": "Speed",
+                        "value": 60,
+                      },
+                    ],
+                  },
+                  {
+                    "baseWeight": 1000,
+                    "currentWeight": 1000,
+                    "id": 3,
+                    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/3.png",
+                    "name": "Venusaur",
+                    "order": 3,
+                    "stats": [
+                      {
+                        "name": "HP",
+                        "value": 80,
+                      },
+                      {
+                        "name": "Attack",
+                        "value": 82,
+                      },
+                      {
+                        "name": "Defense",
+                        "value": 83,
+                      },
+                      {
+                        "name": "Special Attack",
+                        "value": 100,
+                      },
+                      {
+                        "name": "Special Defense",
+                        "value": 100,
+                      },
+                      {
+                        "name": "Speed",
+                        "value": 80,
+                      },
+                    ],
+                  },
+                ],
+                "id": 2,
+                "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png",
+                "maxWeight": 1000,
+                "name": "Ivysaur",
+                "nextEvolution": [
+                  {
+                    "baseWeight": 1000,
+                    "currentWeight": 1000,
+                    "id": 3,
+                    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/3.png",
+                    "name": "Venusaur",
+                    "order": 3,
+                    "stats": [
+                      {
+                        "name": "HP",
+                        "value": 80,
+                      },
+                      {
+                        "name": "Attack",
+                        "value": 82,
+                      },
+                      {
+                        "name": "Defense",
+                        "value": 83,
+                      },
+                      {
+                        "name": "Special Attack",
+                        "value": 100,
+                      },
+                      {
+                        "name": "Special Defense",
+                        "value": 100,
+                      },
+                      {
+                        "name": "Speed",
+                        "value": 80,
+                      },
+                    ],
+                  },
+                ],
+                "order": 2,
+                "stats": [
+                  {
+                    "name": "HP",
+                    "value": 60,
+                  },
+                  {
+                    "name": "Attack",
+                    "value": 62,
+                  },
+                  {
+                    "name": "Defense",
+                    "value": 63,
+                  },
+                  {
+                    "name": "Special Attack",
+                    "value": 80,
+                  },
+                  {
+                    "name": "Special Defense",
+                    "value": 80,
+                  },
+                  {
+                    "name": "Speed",
+                    "value": 60,
+                  },
+                ],
+              },
+              {
+                "baseWeight": 1000,
+                "currentWeight": 1000,
+                "evolutions": [
+                  {
+                    "baseWeight": 69,
+                    "currentWeight": 69,
+                    "id": 1,
+                    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
+                    "name": "Bulbasaur",
+                    "order": 1,
+                    "stats": [
+                      {
+                        "name": "HP",
+                        "value": 45,
+                      },
+                      {
+                        "name": "Attack",
+                        "value": 49,
+                      },
+                      {
+                        "name": "Defense",
+                        "value": 49,
+                      },
+                      {
+                        "name": "Special Attack",
+                        "value": 65,
+                      },
+                      {
+                        "name": "Special Defense",
+                        "value": 65,
+                      },
+                      {
+                        "name": "Speed",
+                        "value": 45,
+                      },
+                    ],
+                  },
+                  {
+                    "baseWeight": 130,
+                    "currentWeight": 130,
+                    "id": 2,
+                    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png",
+                    "name": "Ivysaur",
+                    "order": 2,
+                    "stats": [
+                      {
+                        "name": "HP",
+                        "value": 60,
+                      },
+                      {
+                        "name": "Attack",
+                        "value": 62,
+                      },
+                      {
+                        "name": "Defense",
+                        "value": 63,
+                      },
+                      {
+                        "name": "Special Attack",
+                        "value": 80,
+                      },
+                      {
+                        "name": "Special Defense",
+                        "value": 80,
+                      },
+                      {
+                        "name": "Speed",
+                        "value": 60,
+                      },
+                    ],
+                  },
+                  {
+                    "baseWeight": 1000,
+                    "currentWeight": 1000,
+                    "id": 3,
+                    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/3.png",
+                    "name": "Venusaur",
+                    "order": 3,
+                    "stats": [
+                      {
+                        "name": "HP",
+                        "value": 80,
+                      },
+                      {
+                        "name": "Attack",
+                        "value": 82,
+                      },
+                      {
+                        "name": "Defense",
+                        "value": 83,
+                      },
+                      {
+                        "name": "Special Attack",
+                        "value": 100,
+                      },
+                      {
+                        "name": "Special Defense",
+                        "value": 100,
+                      },
+                      {
+                        "name": "Speed",
+                        "value": 80,
+                      },
+                    ],
+                  },
+                ],
+                "id": 3,
+                "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/3.png",
+                "maxWeight": 1000,
+                "name": "Venusaur",
+                "order": 3,
+                "stats": [
+                  {
+                    "name": "HP",
+                    "value": 80,
+                  },
+                  {
+                    "name": "Attack",
+                    "value": 82,
+                  },
+                  {
+                    "name": "Defense",
+                    "value": 83,
+                  },
+                  {
+                    "name": "Special Attack",
+                    "value": 100,
+                  },
+                  {
+                    "name": "Special Defense",
+                    "value": 100,
+                  },
+                  {
+                    "name": "Speed",
+                    "value": 80,
+                  },
+                ],
+              },
+            ],
             "id": 1,
-            "image": "poke-image",
-            "lastEat": "soft",
-            "maxWeight": 10,
-            "name": "pokemon",
-            "nextEvolution": [],
-            "order": 1,
-            "owned": false,
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
+            "maxWeight": 130,
+            "name": "Bulbasaur",
+            "nextEvolution": [
+              {
+                "baseWeight": 130,
+                "currentWeight": 130,
+                "evolutions": [
+                  {
+                    "baseWeight": 69,
+                    "currentWeight": 69,
+                    "id": 1,
+                    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
+                    "name": "Bulbasaur",
+                    "order": 1,
+                    "stats": [
+                      {
+                        "name": "HP",
+                        "value": 45,
+                      },
+                      {
+                        "name": "Attack",
+                        "value": 49,
+                      },
+                      {
+                        "name": "Defense",
+                        "value": 49,
+                      },
+                      {
+                        "name": "Special Attack",
+                        "value": 65,
+                      },
+                      {
+                        "name": "Special Defense",
+                        "value": 65,
+                      },
+                      {
+                        "name": "Speed",
+                        "value": 45,
+                      },
+                    ],
+                  },
+                  {
+                    "baseWeight": 130,
+                    "currentWeight": 130,
+                    "id": 2,
+                    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png",
+                    "name": "Ivysaur",
+                    "order": 2,
+                    "stats": [
+                      {
+                        "name": "HP",
+                        "value": 60,
+                      },
+                      {
+                        "name": "Attack",
+                        "value": 62,
+                      },
+                      {
+                        "name": "Defense",
+                        "value": 63,
+                      },
+                      {
+                        "name": "Special Attack",
+                        "value": 80,
+                      },
+                      {
+                        "name": "Special Defense",
+                        "value": 80,
+                      },
+                      {
+                        "name": "Speed",
+                        "value": 60,
+                      },
+                    ],
+                  },
+                  {
+                    "baseWeight": 1000,
+                    "currentWeight": 1000,
+                    "id": 3,
+                    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/3.png",
+                    "name": "Venusaur",
+                    "order": 3,
+                    "stats": [
+                      {
+                        "name": "HP",
+                        "value": 80,
+                      },
+                      {
+                        "name": "Attack",
+                        "value": 82,
+                      },
+                      {
+                        "name": "Defense",
+                        "value": 83,
+                      },
+                      {
+                        "name": "Special Attack",
+                        "value": 100,
+                      },
+                      {
+                        "name": "Special Defense",
+                        "value": 100,
+                      },
+                      {
+                        "name": "Speed",
+                        "value": 80,
+                      },
+                    ],
+                  },
+                ],
+                "id": 2,
+                "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png",
+                "maxWeight": 1000,
+                "name": "Ivysaur",
+                "nextEvolution": [
+                  {
+                    "baseWeight": 1000,
+                    "currentWeight": 1000,
+                    "id": 3,
+                    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/3.png",
+                    "name": "Venusaur",
+                    "order": 3,
+                    "stats": [
+                      {
+                        "name": "HP",
+                        "value": 80,
+                      },
+                      {
+                        "name": "Attack",
+                        "value": 82,
+                      },
+                      {
+                        "name": "Defense",
+                        "value": 83,
+                      },
+                      {
+                        "name": "Special Attack",
+                        "value": 100,
+                      },
+                      {
+                        "name": "Special Defense",
+                        "value": 100,
+                      },
+                      {
+                        "name": "Speed",
+                        "value": 80,
+                      },
+                    ],
+                  },
+                ],
+                "order": 2,
+                "stats": [
+                  {
+                    "name": "HP",
+                    "value": 60,
+                  },
+                  {
+                    "name": "Attack",
+                    "value": 62,
+                  },
+                  {
+                    "name": "Defense",
+                    "value": 63,
+                  },
+                  {
+                    "name": "Special Attack",
+                    "value": 80,
+                  },
+                  {
+                    "name": "Special Defense",
+                    "value": 80,
+                  },
+                  {
+                    "name": "Speed",
+                    "value": 60,
+                  },
+                ],
+              },
+              {
+                "baseWeight": 1000,
+                "currentWeight": 1000,
+                "evolutions": [
+                  {
+                    "baseWeight": 69,
+                    "currentWeight": 69,
+                    "id": 1,
+                    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
+                    "name": "Bulbasaur",
+                    "order": 1,
+                    "stats": [
+                      {
+                        "name": "HP",
+                        "value": 45,
+                      },
+                      {
+                        "name": "Attack",
+                        "value": 49,
+                      },
+                      {
+                        "name": "Defense",
+                        "value": 49,
+                      },
+                      {
+                        "name": "Special Attack",
+                        "value": 65,
+                      },
+                      {
+                        "name": "Special Defense",
+                        "value": 65,
+                      },
+                      {
+                        "name": "Speed",
+                        "value": 45,
+                      },
+                    ],
+                  },
+                  {
+                    "baseWeight": 130,
+                    "currentWeight": 130,
+                    "id": 2,
+                    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png",
+                    "name": "Ivysaur",
+                    "order": 2,
+                    "stats": [
+                      {
+                        "name": "HP",
+                        "value": 60,
+                      },
+                      {
+                        "name": "Attack",
+                        "value": 62,
+                      },
+                      {
+                        "name": "Defense",
+                        "value": 63,
+                      },
+                      {
+                        "name": "Special Attack",
+                        "value": 80,
+                      },
+                      {
+                        "name": "Special Defense",
+                        "value": 80,
+                      },
+                      {
+                        "name": "Speed",
+                        "value": 60,
+                      },
+                    ],
+                  },
+                  {
+                    "baseWeight": 1000,
+                    "currentWeight": 1000,
+                    "id": 3,
+                    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/3.png",
+                    "name": "Venusaur",
+                    "order": 3,
+                    "stats": [
+                      {
+                        "name": "HP",
+                        "value": 80,
+                      },
+                      {
+                        "name": "Attack",
+                        "value": 82,
+                      },
+                      {
+                        "name": "Defense",
+                        "value": 83,
+                      },
+                      {
+                        "name": "Special Attack",
+                        "value": 100,
+                      },
+                      {
+                        "name": "Special Defense",
+                        "value": 100,
+                      },
+                      {
+                        "name": "Speed",
+                        "value": 80,
+                      },
+                    ],
+                  },
+                ],
+                "id": 3,
+                "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/3.png",
+                "maxWeight": 1000,
+                "name": "Venusaur",
+                "order": 3,
+                "stats": [
+                  {
+                    "name": "HP",
+                    "value": 80,
+                  },
+                  {
+                    "name": "Attack",
+                    "value": 82,
+                  },
+                  {
+                    "name": "Defense",
+                    "value": 83,
+                  },
+                  {
+                    "name": "Special Attack",
+                    "value": 100,
+                  },
+                  {
+                    "name": "Special Defense",
+                    "value": 100,
+                  },
+                  {
+                    "name": "Speed",
+                    "value": 80,
+                  },
+                ],
+              },
+            ],
             "stats": [
               {
-                "name": "stat",
-                "value": 12,
+                "name": "HP",
+                "value": 45,
+              },
+              {
+                "name": "Attack",
+                "value": 49,
+              },
+              {
+                "name": "Defense",
+                "value": 49,
+              },
+              {
+                "name": "Special Attack",
+                "value": 65,
+              },
+              {
+                "name": "Special Defense",
+                "value": 65,
+              },
+              {
+                "name": "Speed",
+                "value": 45,
               },
             ],
           },
@@ -64,6 +920,7 @@ exports[`renders Card correctly 1`] = `
       renderItem={[Function]}
       scrollEventThrottle={0.0001}
       stickyHeaderIndices={[]}
+      testID="PokemonListContainer"
       viewabilityConfigCallbackPairs={[]}
     >
       <View>
@@ -131,6 +988,7 @@ exports[`renders Card correctly 1`] = `
                   "opacity": 1,
                 }
               }
+              testID="PokemonCard-Bulbasaur"
             >
               <View
                 style={
@@ -190,7 +1048,7 @@ exports[`renders Card correctly 1`] = `
                     ]
                   }
                 >
-                  pokemon
+                  Bulbasaur
                 </Text>
               </View>
             </View>
