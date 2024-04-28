@@ -1,7 +1,8 @@
 import {BerryData} from '@/definitions/usecases/pokemon';
+import {TouchableOpacityProps} from 'react-native-gesture-handler';
 
-export interface BerryButtonProps {
+export interface BerryButtonProps extends TouchableOpacityProps {
   item: BerryData;
   ownedId: string;
-  onSelectBerry?: (ownedId: string, item: BerryData) => void;
+  onPress?: (ownedId: string, item: BerryData) => void;
 }

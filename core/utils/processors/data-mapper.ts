@@ -15,55 +15,26 @@ import {capitalize} from '@/utils';
 export const pokemonDataMapper = (data: PokeApiQueryQuery): PokemonData[] => {
   return data.pokemon_v2_pokemon.map(pokemon => {
     // map stat
-    const stats: PokemonStat[] = pokemon.pokemon_v2_pokemonstats.map(stat => {
-      return {
-        value: stat.base_stat,
-        name: stat.pokemon_v2_stat?.pokemon_v2_statnames[0].name,
-      };
-    });
+    const stats = statMapper(pokemon.pokemon_v2_pokemonstats);
+
     // map evolution
-    const evolutions: PokemonData[] | undefined =
-      pokemon.pokemon_v2_pokemonspecy?.pokemon_v2_evolutionchain?.pokemon_v2_pokemonspecies.map(
-        species => {
-          const evoStats: PokemonStat[] = pokemon.pokemon_v2_pokemonstats.map(
-            evoStat => {
-              return {
-                value: evoStat.base_stat,
-                name: evoStat.pokemon_v2_stat?.pokemon_v2_statnames[0].name,
-              };
-            },
-          );
-          return {
-            id: species.id,
-            name: capitalize(species.name),
-            baseWeight: species.pokemon_v2_pokemons[0].weight,
-            currentWeight: species.pokemon_v2_pokemons[0].weight,
-            image:
-              species.pokemon_v2_pokemons[0].pokemon_v2_pokemonsprites[0]
-                .sprites,
-            order: species.order,
-            stats: evoStats,
-          };
-        },
-      );
+    const evolutions = evolutionMapper(
+      pokemon.pokemon_v2_pokemonspecy?.pokemon_v2_evolutionchain
+        ?.pokemon_v2_pokemonspecies || [],
+    );
 
     // map evolution next evo
-    const evolutionWithNextEvos = evolutions?.map(next => {
-      let clonedNext: PokemonData = {...next};
-      clonedNext.evolutions = evolutions;
-      const nextOfNextEvo = findNextWeight(clonedNext, evolutions);
-      clonedNext = setPokemonNextEvo(clonedNext, nextOfNextEvo);
-      return clonedNext;
-    });
+    const evolutionWithNextEvos = nextEvolutionMapper(evolutions);
+    const maxWeight = evolutionWithNextEvos?.length
+      ? evolutionWithNextEvos[0].baseWeight
+      : pokemon.weight;
     const currentPokemon: PokemonData = {
       id: pokemon.id,
       name: capitalize(pokemon.name),
       image: pokemon.pokemon_v2_pokemonsprites[0].sprites,
       baseWeight: pokemon.weight,
       currentWeight: pokemon.weight,
-      maxWeight: evolutionWithNextEvos?.length
-        ? evolutionWithNextEvos[0].baseWeight
-        : pokemon.weight,
+      maxWeight: maxWeight,
       stats,
       evolutions: evolutionWithNextEvos,
     };
@@ -81,6 +52,81 @@ export const pokemonDataMapper = (data: PokeApiQueryQuery): PokemonData[] => {
   });
 };
 
+export const statMapper = (
+  stats: Array<{
+    __typename?: 'pokemon_v2_pokemonstat';
+    base_stat: number;
+    pokemon_v2_stat?: {
+      __typename?: 'pokemon_v2_stat';
+      pokemon_v2_statnames: Array<{
+        __typename?: 'pokemon_v2_statname';
+        name: string;
+      }>;
+    } | null;
+  }>,
+): PokemonStat[] => {
+  return stats.map(stat => {
+    return {
+      value: stat.base_stat,
+      name: stat.pokemon_v2_stat?.pokemon_v2_statnames[0].name,
+    };
+  });
+};
+
+export const evolutionMapper = (
+  species: Array<{
+    __typename?: 'pokemon_v2_pokemonspecies';
+    id: number;
+    name: string;
+    order?: number | null;
+    pokemon_v2_pokemons: Array<{
+      __typename?: 'pokemon_v2_pokemon';
+      weight?: number | null;
+      pokemon_v2_pokemonsprites: Array<{
+        __typename?: 'pokemon_v2_pokemonsprites';
+        sprites: any;
+      }>;
+      pokemon_v2_pokemonstats: Array<{
+        __typename?: 'pokemon_v2_pokemonstat';
+        base_stat: number;
+        pokemon_v2_stat?: {
+          __typename?: 'pokemon_v2_stat';
+          pokemon_v2_statnames: Array<{
+            __typename?: 'pokemon_v2_statname';
+            name: string;
+          }>;
+        } | null;
+      }>;
+    }>;
+  }>,
+): PokemonData[] => {
+  return species.map(pokemon => {
+    const currentPokemon = pokemon.pokemon_v2_pokemons[0];
+    const evoStats: PokemonStat[] = statMapper(
+      currentPokemon.pokemon_v2_pokemonstats,
+    );
+    return {
+      id: pokemon.id,
+      name: capitalize(pokemon.name),
+      baseWeight: currentPokemon.weight,
+      currentWeight: currentPokemon.weight,
+      image: currentPokemon.pokemon_v2_pokemonsprites[0].sprites,
+      order: pokemon.order,
+      stats: evoStats,
+    };
+  });
+};
+
+export const nextEvolutionMapper = (pokemons: PokemonData[]) => {
+  return pokemons.map(next => {
+    let clonedNext: PokemonData = {...next};
+    clonedNext.evolutions = pokemons;
+    const nextOfNextEvo = findNextWeight(clonedNext, pokemons);
+    clonedNext = setPokemonNextEvo(clonedNext, nextOfNextEvo);
+    return clonedNext;
+  });
+};
+
 export const findNextWeight = (
   current: PokemonData,
   evolutions: PokemonData[],
@@ -92,12 +138,9 @@ export const findNextWeight = (
     pokemon => pokemon.id === current.id,
   );
   if (currentEvo) {
-    const nextEvo: PokemonData[] | undefined = evolutions.filter(
+    return evolutions.filter(
       pokemon => (pokemon.order as number) > (currentEvo?.order as number),
     );
-    if (nextEvo) {
-      return nextEvo;
-    }
   }
 
   return [current];

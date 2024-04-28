@@ -1,16 +1,13 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import BerryButton from '../index';
-import {BerryData} from '@/definitions/usecases/pokemon';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
+import {fireEvent, render, waitFor} from '@testing-library/react-native';
+import {dataBerry} from '@/__mocks__/constanta.ts';
+
+const dummyBerry = dataBerry[0];
 
 it('renders BerryButton correctly', () => {
-  const dummyBerry: BerryData = {
-    id: 1,
-    name: 'dummy',
-    firmness: 'soft',
-    image: 'image',
-  };
   const tree = renderer
     .create(
       <GestureHandlerRootView>
@@ -19,4 +16,22 @@ it('renders BerryButton correctly', () => {
     )
     .toJSON();
   expect(tree).toMatchSnapshot();
+});
+
+it('BerryButton action test', async () => {
+  const mockSelect = jest.fn();
+  const tree = render(
+    <GestureHandlerRootView>
+      <BerryButton
+        item={dummyBerry}
+        onPress={mockSelect}
+        ownedId="randomString"
+        testID="berryButton"
+      />
+    </GestureHandlerRootView>,
+  );
+  const {getByTestId} = tree;
+  const button = getByTestId('berryButton');
+  fireEvent.press(button);
+  await waitFor(() => expect(mockSelect.mock.calls.length).toBe(1));
 });

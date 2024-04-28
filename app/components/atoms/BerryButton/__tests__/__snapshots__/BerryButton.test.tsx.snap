@@ -89,7 +89,11 @@ exports[`renders BerryButton correctly 1`] = `
           }
         >
           <FastImageView
-            defaultSource={null}
+            defaultSource={
+              {
+                "testUri": "../../../app/assets/images/berry.png",
+              }
+            }
             resizeMode="cover"
             style={
               {

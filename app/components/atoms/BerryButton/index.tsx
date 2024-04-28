@@ -8,17 +8,23 @@ import {memo} from 'react';
 const BerryButton = memo(function BerryButton({
   item,
   ownedId,
-  onSelectBerry,
+  onPress,
+  ...others
 }: BerryButtonProps) {
   return (
     <TouchableOpacity
+      {...others}
       key={item.id}
       onPress={() => {
-        onSelectBerry?.(ownedId, item);
+        onPress?.(ownedId, item);
       }}
       style={{height: '100%', width: '100%'}}>
       <View className="flex flex-1 p-0.5 rounded-full bg-gray-100 justify-center items-center overflow-hidden">
-        <FastImage className="w-full h-full" source={{uri: item.image}} />
+        <FastImage
+          defaultSource={require('~/assets/images/berry.png')}
+          className="w-full h-full"
+          source={{uri: item.image}}
+        />
       </View>
     </TouchableOpacity>
   );
