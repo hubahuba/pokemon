@@ -1,14 +1,14 @@
 import {GameActionUseCase} from '@/definitions/usecases/game-action';
 import {PokemonData} from '@/definitions/usecases/pokemon';
-import LocalStorage from '@/adapters/local-storage.ts';
+import Mmkv from '@/adapters/mmkv.ts';
 import {v4 as uuid} from 'uuid';
 import {getBerryScore} from '@/utils';
 
 const GameAction: GameActionUseCase = {
-  iChooseYou: data => {
+  iChooseYou: (data: PokemonData) => {
     const selected: PokemonData = {...data};
     let myPokemons: PokemonData[] | string | undefined =
-      LocalStorage.getItem('my-pokemons');
+      Mmkv.getItem('my-pokemons');
     if (myPokemons) {
       myPokemons = JSON.parse(myPokemons);
     } else {
@@ -18,25 +18,25 @@ const GameAction: GameActionUseCase = {
     selected.ownedId = uuid();
     selected.currentWeight = selected.baseWeight;
     (myPokemons as PokemonData[]).push(selected);
-    LocalStorage.setItem('my-pokemons', JSON.stringify(myPokemons));
+    Mmkv.setItem('my-pokemons', JSON.stringify(myPokemons));
     return selected;
   },
 
   deletePokemon: pokemonId => {
     const myPokemons: PokemonData[] | string | undefined =
-      LocalStorage.getItem('my-pokemons');
+      Mmkv.getItem('my-pokemons');
     if (myPokemons) {
       const pokemons: PokemonData[] = JSON.parse(myPokemons);
       const filtered = pokemons.filter(
         pokemon => pokemon.ownedId !== pokemonId,
       );
-      LocalStorage.setItem('my-pokemons', JSON.stringify(filtered));
+      Mmkv.setItem('my-pokemons', JSON.stringify(filtered));
     }
   },
 
   feedPokemon: (pokemonId, berry) => {
     const myPokemons: PokemonData[] | string | undefined =
-      LocalStorage.getItem('my-pokemons');
+      Mmkv.getItem('my-pokemons');
     if (myPokemons) {
       const pokemons: PokemonData[] = JSON.parse(myPokemons);
       const currentPokemon = pokemons.find(
@@ -59,7 +59,7 @@ const GameAction: GameActionUseCase = {
           pokemon => pokemon.ownedId !== pokemonId,
         );
         filtered.push(currentPokemon);
-        LocalStorage.setItem('my-pokemons', JSON.stringify(filtered));
+        Mmkv.setItem('my-pokemons', JSON.stringify(filtered));
         return currentPokemon;
       }
       return currentPokemon;
@@ -69,7 +69,7 @@ const GameAction: GameActionUseCase = {
 
   evolutionPokemon: pokemonId => {
     const myPokemons: PokemonData[] | string | undefined =
-      LocalStorage.getItem('my-pokemons');
+      Mmkv.getItem('my-pokemons');
     if (myPokemons) {
       const pokemons: PokemonData[] = JSON.parse(myPokemons);
       let currentPokemon = pokemons.find(
@@ -86,7 +86,7 @@ const GameAction: GameActionUseCase = {
           pokemon => pokemon.ownedId !== pokemonId,
         );
         filtered.push(current);
-        LocalStorage.setItem('my-pokemons', JSON.stringify(filtered));
+        Mmkv.setItem('my-pokemons', JSON.stringify(filtered));
 
         return current;
       }
