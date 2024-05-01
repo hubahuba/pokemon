@@ -6,11 +6,11 @@ const storage = new MMKV({
   encryptionKey: 'this-is-secret',
 });
 
-const LocalStorage: LocalStorageProps = {
+const Mmkv: LocalStorageProps = {
   getItem: storage.getString.bind(storage),
   setItem: storage.set.bind(storage),
   removeItem: storage.delete.bind(storage),
   clear: storage.clearAll.bind(storage),
 };
 
-export default LocalStorage;
+export default Mmkv;

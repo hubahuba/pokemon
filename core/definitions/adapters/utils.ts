@@ -14,7 +14,7 @@ interface UtilsProps {
   findNextWeight: (
     current: PokemonData,
     evolutions: PokemonData[],
-  ) => PokemonData;
+  ) => PokemonData[];
   berryDataMapper: (data: PokeGetBerriesQuery) => BerryData[];
   filterMapper: (
     offset: number,
