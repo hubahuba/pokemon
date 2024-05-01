@@ -1,10 +1,8 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 import PokemonCard from '../index';
+import {render} from '@testing-library/react-native';
 
 it('renders Card correctly', () => {
-  const tree = renderer
-    .create(<PokemonCard name="test" image="test" />)
-    .toJSON();
+  const tree = render(<PokemonCard name="test" image="test" />).toJSON();
   expect(tree).toMatchSnapshot();
 });
