@@ -1,5 +1,4 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 import BerryButton from '../index';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
 import {fireEvent, render, waitFor} from '@testing-library/react-native';
@@ -8,13 +7,11 @@ import {dataBerry} from '@/__mocks__/constanta.ts';
 const dummyBerry = dataBerry[0];
 
 it('renders BerryButton correctly', () => {
-  const tree = renderer
-    .create(
-      <GestureHandlerRootView>
-        <BerryButton item={dummyBerry} ownedId="randomString" />
-      </GestureHandlerRootView>,
-    )
-    .toJSON();
+  const tree = render(
+    <GestureHandlerRootView>
+      <BerryButton item={dummyBerry} ownedId="randomString" />
+    </GestureHandlerRootView>,
+  ).toJSON();
   expect(tree).toMatchSnapshot();
 });
 
