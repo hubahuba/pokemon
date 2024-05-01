@@ -6,6 +6,7 @@ import {
   InputMaybe,
   Pokemon_V2_Pokemon_Bool_Exp,
 } from '@/definitions/gql/codegen/graphql';
+import Pokemon from '@/usecases/pokemon.ts';
 
 export type QuerySearch = Exact<{
   limit: number;
@@ -70,4 +71,9 @@ export interface PokemonUseCaseProps {
 export interface getBerryScoreResult {
   firmness: string;
   score: number;
+}
+
+export interface fetchPokemonResponse {
+  lastOffset: number;
+  pokemons: Pokemon[];
 }

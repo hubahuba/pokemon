@@ -4,6 +4,8 @@ import {
   PokemonUseCaseProps,
   PokemonData,
   QuerySearch,
+  fetchPokemonResponse,
+  BerryData,
 } from '@/definitions/usecases/pokemon';
 import {pokeAPIQueryDocument} from '@/data/pokemons.ts';
 import {PokeGetBerriesQueryDocument} from '@/data/berries.ts';
@@ -15,7 +17,7 @@ import {
 } from '@tanstack/react-query';
 import request from 'graphql-request';
 import Config from 'react-native-config';
-import LocalStorage from '@/adapters/local-storage.ts';
+import Mmkv from '@/adapters/mmkv';
 import crashlytics from '@react-native-firebase/crashlytics';
 
 const Pokemon: PokemonUseCaseProps = {
@@ -28,16 +30,24 @@ const Pokemon: PokemonUseCaseProps = {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const query = useInfiniteQuery({
       queryKey: ['getPokemons', filter],
-      queryFn: async ({pageParam}: any) => {
-        const resp = await request(
-          Config.API_URL as string,
-          pokeAPIQueryDocument,
-          pageParam,
-        );
-        return {
-          lastOffset: pageParam.offset,
-          pokemons: pokemonDataMapper(resp),
-        };
+      queryFn: async ({
+        pageParam,
+      }: {
+        pageParam: QuerySearch;
+      }): Promise<fetchPokemonResponse> => {
+        try {
+          const resp = await request(
+            Config.API_URL as string,
+            pokeAPIQueryDocument,
+            pageParam,
+          );
+          return {
+            lastOffset: pageParam.offset,
+            pokemons: pokemonDataMapper(resp),
+          };
+        } catch (err: any) {
+          throw new Error(err.response.error);
+        }
       },
       initialPageParam: filter,
       getNextPageParam: (nextPage, allPages, lastPageParam) => {
@@ -67,46 +77,51 @@ const Pokemon: PokemonUseCaseProps = {
   },
 
   getBerries: (): GetBerriesUseCase => {
-    const localBerries = LocalStorage.getItem('berries');
-    if (localBerries) {
-      const data = JSON.parse(localBerries);
-      return {
-        isFetched: true,
-        isFetching: false,
-        error: null,
-        data,
-      };
-    }
+    let returnError: Error | null = null;
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const {data, isFetching, isFetched, error} = useQuery({
       queryKey: ['getBerries'],
       queryFn: async () => {
-        const resp = await request(
-          Config.API_URL as string,
-          PokeGetBerriesQueryDocument,
-        );
-        return berryDataMapper(resp);
+        try {
+          let localBerries: string | undefined | BerryData[] =
+            Mmkv.getItem('berries');
+          if (localBerries) {
+            localBerries = JSON.parse(localBerries);
+            return localBerries as BerryData[];
+          }
+          const resp = await request(
+            Config.API_URL as string,
+            PokeGetBerriesQueryDocument,
+          );
+          return berryDataMapper(resp);
+        } catch (err: any) {
+          returnError = new Error(err.response.error);
+        }
       },
     });
 
     if (data) {
-      LocalStorage.setItem('berries', JSON.stringify(data));
+      Mmkv.setItem('berries', JSON.stringify(data));
     }
 
     if (error) {
-      crashlytics().recordError(error, 'useQuery-getBerries');
+      returnError = error;
+    }
+
+    if (returnError) {
+      crashlytics().recordError(returnError, 'useQuery-getBerries');
     }
 
     return {
       data,
       isFetching,
       isFetched,
-      error,
+      error: returnError,
     };
   },
 
   getMyPokemon: (): PokemonData[] => {
-    const localBerries = LocalStorage.getItem('my-pokemons');
+    const localBerries = Mmkv.getItem('my-pokemons');
     if (localBerries) {
       return JSON.parse(localBerries);
     }

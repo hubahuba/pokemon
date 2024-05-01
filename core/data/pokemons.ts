@@ -2,6 +2,7 @@ import {graphql} from '@/definitions/gql/codegen';
 import {TypedDocumentNode} from '@graphql-typed-document-node/core';
 import {PokeApiQueryQuery} from '@/definitions/gql/codegen/graphql.ts';
 import {QuerySearch} from '@/definitions/usecases/pokemon';
+
 export const pokeAPIQueryDocument: TypedDocumentNode<
   PokeApiQueryQuery,
   QuerySearch
