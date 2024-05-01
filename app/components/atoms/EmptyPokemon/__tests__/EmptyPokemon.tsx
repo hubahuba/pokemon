@@ -1,8 +1,8 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 import EmptyPokemon from '../index';
+import {render} from '@testing-library/react-native';
 
 it('renders Card correctly', () => {
-  const tree = renderer.create(<EmptyPokemon message="testing" />).toJSON();
+  const tree = render(<EmptyPokemon message="testing" />).toJSON();
   expect(tree).toMatchSnapshot();
 });
