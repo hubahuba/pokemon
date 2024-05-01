@@ -1,10 +1,10 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 import ImageButton from '../index';
+import {render} from '@testing-library/react-native';
 
 it('renders BerryButton correctly', () => {
-  const tree = renderer
-    .create(<ImageButton source={require('~/assets/images/pikachu-sad.png')} />)
-    .toJSON();
+  const tree = render(
+    <ImageButton source={require('~/assets/images/pikachu-sad.png')} />,
+  ).toJSON();
   expect(tree).toMatchSnapshot();
 });
