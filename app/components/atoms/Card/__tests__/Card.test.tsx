@@ -1,8 +1,8 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 import Card from '../index';
+import {render} from '@testing-library/react-native';
 
 it('renders Card correctly', () => {
-  const tree = renderer.create(<Card />).toJSON();
+  const tree = render(<Card />).toJSON();
   expect(tree).toMatchSnapshot();
 });
