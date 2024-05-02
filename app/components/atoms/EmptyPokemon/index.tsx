@@ -2,7 +2,7 @@ import * as React from 'react';
 import {ImageBackground, Text} from 'react-native';
 import {EmptyPokemonProps} from '~atoms//EmptyPokemon/EmptyPokemon';
 
-export default function EmptyPokemon({message}: EmptyPokemonProps) {
+export default function EmptyPokemon({message}: Readonly<EmptyPokemonProps>) {
   return (
     <ImageBackground
       className="min-h-screen items-center px-4"

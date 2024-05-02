@@ -4,11 +4,12 @@ import Mmkv from '@/adapters/mmkv.ts';
 import {v4 as uuid} from 'uuid';
 import {getBerryScore} from '@/utils';
 
+type MmkvPokemon = PokemonData[] | string | undefined;
+
 const GameAction: GameActionUseCase = {
   iChooseYou: (data: PokemonData) => {
     const selected: PokemonData = {...data};
-    let myPokemons: PokemonData[] | string | undefined =
-      Mmkv.getItem('my-pokemons');
+    let myPokemons: MmkvPokemon = Mmkv.getItem('my-pokemons');
     if (myPokemons) {
       myPokemons = JSON.parse(myPokemons);
     } else {
@@ -23,8 +24,7 @@ const GameAction: GameActionUseCase = {
   },
 
   deletePokemon: pokemonId => {
-    const myPokemons: PokemonData[] | string | undefined =
-      Mmkv.getItem('my-pokemons');
+    const myPokemons: MmkvPokemon = Mmkv.getItem('my-pokemons');
     if (myPokemons) {
       const pokemons: PokemonData[] = JSON.parse(myPokemons);
       const filtered = pokemons.filter(
@@ -75,7 +75,7 @@ const GameAction: GameActionUseCase = {
       let currentPokemon = pokemons.find(
         pokemon => pokemon.ownedId === pokemonId,
       );
-      if (currentPokemon && currentPokemon.nextEvolution) {
+      if (currentPokemon?.nextEvolution) {
         const nextEvo = [...currentPokemon.nextEvolution];
 
         const current: PokemonData = nextEvo.shift();

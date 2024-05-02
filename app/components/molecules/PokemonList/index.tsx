@@ -23,7 +23,7 @@ function PokemonList({
               testID={`PokemonCard-${item.name}`}
             />
           )}
-          keyExtractor={item => item.ownedId || String(item.id)}
+          keyExtractor={item => item.ownedId ?? String(item.id)}
           columnWrapperStyle={{
             justifyContent: 'center',
           }}

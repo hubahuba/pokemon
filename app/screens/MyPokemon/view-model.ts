@@ -1,9 +1,8 @@
 import services from '@/services';
 import {MyPokemonViewModelProps} from '~/screens/MyPokemon/MyPokemon';
 import {PokemonData} from '@/definitions/usecases/pokemon';
-import {useNavigation} from '@react-navigation/native';
+import {useNavigation, useIsFocused} from '@react-navigation/native';
 import {StackNavigation} from '~/routes/routes';
-import {useIsFocused} from '@react-navigation/native';
 import {useEffect, useState} from 'react';
 
 export default function ViewModel(): MyPokemonViewModelProps {

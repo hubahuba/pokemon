@@ -3,7 +3,7 @@ import {TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
 import {IconButtonProps} from '~atoms/IconButton/IconButton';
 
-export default function IconButton(props: IconButtonProps) {
+export default function IconButton(props: Readonly<IconButtonProps>) {
   const {iconName, color, className, ...touchOpacityProps} = props;
   return (
     <TouchableOpacity className={className} {...touchOpacityProps}>

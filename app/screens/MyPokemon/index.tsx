@@ -6,7 +6,7 @@ import {PokemonData} from '@/definitions/usecases/pokemon';
 
 export default function MyPokemon() {
   const {data, onPressCard} = ViewModel();
-  return data && data?.length ? (
+  return data?.length ? (
     <PokemonList
       data={data}
       onPressCard={(selected: PokemonData) => onPressCard(selected)}

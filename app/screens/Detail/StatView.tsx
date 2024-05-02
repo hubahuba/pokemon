@@ -14,7 +14,7 @@ export default function StatView({
   onDeletePokemon,
   onEvolution,
   nextEvolution,
-}: StatViewProps) {
+}: Readonly<StatViewProps>) {
   return (
     <View testID="StatView" className="bg-gray-100 p-4 rounded w-full">
       <View className="flex border-b-gray-300 border-b pb-1 mb-2 items-center">

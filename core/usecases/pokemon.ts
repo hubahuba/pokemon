@@ -37,7 +37,7 @@ const Pokemon: PokemonUseCaseProps = {
       }): Promise<fetchPokemonResponse> => {
         try {
           const resp = await request(
-            Config.API_URL as string,
+            Config.API_URL,
             pokeAPIQueryDocument,
             pageParam,
           );
@@ -51,7 +51,7 @@ const Pokemon: PokemonUseCaseProps = {
       },
       initialPageParam: filter,
       getNextPageParam: (nextPage, allPages, lastPageParam) => {
-        if (lastPageParam && lastPageParam.limit) {
+        if (lastPageParam?.limit) {
           lastPageParam.offset = nextPage.lastOffset + lastPageParam.limit;
           return lastPageParam;
         }
@@ -60,7 +60,7 @@ const Pokemon: PokemonUseCaseProps = {
     });
 
     let pokemonData: PokemonData[] = [];
-    if (query && query.data) {
+    if (query?.data) {
       const pokemons = query.data.pages.map(group => group.pokemons);
       pokemonData = pokemons?.reduce((r, e) => (r.push(...e), r), []);
     }
@@ -90,7 +90,7 @@ const Pokemon: PokemonUseCaseProps = {
             return localBerries as BerryData[];
           }
           const resp = await request(
-            Config.API_URL as string,
+            Config.API_URL,
             PokeGetBerriesQueryDocument,
           );
           return berryDataMapper(resp);
