@@ -21,13 +21,13 @@ import Mmkv from '@/adapters/mmkv';
 import crashlytics from '@react-native-firebase/crashlytics';
 
 const Pokemon: PokemonUseCaseProps = {
-  getPokemon: (
+  usePokemon: (
     offset,
     limit,
     search,
   ): UseInfiniteQueryResult<PokemonData[] | undefined> => {
     const filter: QuerySearch = filterMapper(offset, limit, search);
-    // eslint-disable-next-line react-hooks/rules-of-hooks
+
     const query = useInfiniteQuery({
       queryKey: ['getPokemons', filter],
       queryFn: async ({
@@ -76,9 +76,9 @@ const Pokemon: PokemonUseCaseProps = {
     };
   },
 
-  getBerries: (): GetBerriesUseCase => {
+  useBerries: (): GetBerriesUseCase => {
     let returnError: Error | null = null;
-    // eslint-disable-next-line react-hooks/rules-of-hooks
+
     const {data, isFetching, isFetched, error} = useQuery({
       queryKey: ['getBerries'],
       queryFn: async () => {

@@ -58,13 +58,13 @@ export interface GetBerriesUseCase {
 }
 
 export interface PokemonUseCaseProps {
-  getPokemon: (
+  usePokemon: (
     offset: number,
     limit: number,
     search?: string | number,
   ) => UseInfiniteQueryResult<PokemonData[] | undefined>;
 
-  getBerries: () => GetBerriesUseCase;
+  useBerries: () => GetBerriesUseCase;
   getMyPokemon: () => PokemonData[];
 }
 

@@ -19,7 +19,7 @@ describe('useCase pokemon', () => {
       data: dummyData,
     }));
 
-    const {result} = renderHook(() => Pokemon.getPokemon(0, 20), {wrapper});
+    const {result} = renderHook(() => Pokemon.usePokemon(0, 20), {wrapper});
     await waitFor(() => expect(result.current.isSuccess).toBe(true));
   });
 
@@ -28,7 +28,7 @@ describe('useCase pokemon', () => {
       data: dummyData,
     }));
 
-    const {result} = renderHook(() => Pokemon.getPokemon(0, 0), {wrapper});
+    const {result} = renderHook(() => Pokemon.usePokemon(0, 0), {wrapper});
     await waitFor(() => expect(result.current.isSuccess).toBe(true));
   });
 
@@ -37,7 +37,7 @@ describe('useCase pokemon', () => {
       .post('/graphql/v1beta')
       .reply(500, {error: 'error test'});
 
-    const {result} = renderHook(() => Pokemon.getPokemon(0, 11), {wrapper});
+    const {result} = renderHook(() => Pokemon.usePokemon(0, 11), {wrapper});
     await waitFor(() => {
       expect(result.current.failureCount).toBe(1);
     });
@@ -50,14 +50,14 @@ describe('useCase pokemon', () => {
         data: dummyBerries,
       }));
 
-    const {result} = renderHook(() => Pokemon.getBerries(), {wrapper});
+    const {result} = renderHook(() => Pokemon.useBerries(), {wrapper});
     await waitFor(() => expect(result.current.isFetched).toBe(true));
   });
 
   test('getBerries test local storage', async () => {
     Mmkv.setItem('berries', JSON.stringify(dummyBerries));
 
-    const {result} = renderHook(() => Pokemon.getBerries(), {wrapper});
+    const {result} = renderHook(() => Pokemon.useBerries(), {wrapper});
     await waitFor(() => expect(result.current.isFetched).toBe(true));
   });
 
