@@ -4,8 +4,8 @@ import {StackNavigation} from '~/routes/routes';
 import services from '@/services.ts';
 
 function ViewModel(): SplashViewModel {
-  const {data, isFetching, isFetched, error} =
-    services.useCase.pokemon.getBerries();
+  const {useBerries} = services.useCase.pokemon;
+  const {data, isFetching, isFetched, error} = useBerries();
   const navigation = useNavigation<StackNavigation>();
 
   if (isFetched && data?.length) {
@@ -17,7 +17,7 @@ function ViewModel(): SplashViewModel {
     }, 500);
   }
 
-  return {data, isFetching, isFetched};
+  return {data, isFetching, isFetched, error};
 }
 
 export default ViewModel;

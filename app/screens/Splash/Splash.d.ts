@@ -4,4 +4,5 @@ export interface SplashViewModel {
   data: BerryData[] | undefined;
   isFetching: boolean;
   isFetched: boolean;
+  error: Error | null;
 }
