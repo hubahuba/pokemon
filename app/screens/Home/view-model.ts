@@ -8,7 +8,7 @@ import {PokemonData} from '@/definitions/usecases/pokemon';
 const ViewModel = (): HomeViewModelProps => {
   const navigation = useNavigation<StackNavigation>();
   const [search, setSearch] = useState('');
-  const {data, fetchNextPage, isFetched} = services.useCase.pokemon.getPokemon(
+  const {data, fetchNextPage, isFetched} = services.useCase.pokemon.usePokemon(
     0,
     20,
     search,
