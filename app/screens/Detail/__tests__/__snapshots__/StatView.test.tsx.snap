@@ -1,0 +1,2839 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders StatView correctly 1`] = `
+<View
+  style={
+    [
+      {
+        "backgroundColor": "#f3f4f6",
+      },
+      {
+        "paddingBottom": 16,
+        "paddingLeft": 16,
+        "paddingRight": 16,
+        "paddingTop": 16,
+      },
+      {
+        "borderBottomLeftRadius": 4,
+        "borderBottomRightRadius": 4,
+        "borderTopLeftRadius": 4,
+        "borderTopRightRadius": 4,
+      },
+      {
+        "width": "100%",
+      },
+    ]
+  }
+  testID="StatView"
+>
+  <View
+    style={
+      [
+        {
+          "display": "flex",
+        },
+        {
+          "borderBottomColor": "#d1d5db",
+        },
+        {
+          "borderBottomWidth": 1,
+        },
+        {
+          "paddingBottom": 4,
+        },
+        {
+          "marginBottom": 8,
+        },
+        {
+          "alignItems": "center",
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        [
+          {
+            "color": "#475569",
+          },
+          {
+            "fontFamily": "Raleway-Bold",
+          },
+          {
+            "fontSize": 28,
+          },
+        ]
+      }
+    >
+      Bulbasaur
+    </Text>
+  </View>
+  <View
+    style={
+      [
+        {
+          "width": "100%",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        [
+          {
+            "marginBottom": 8,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          [
+            {
+              "display": "flex",
+            },
+            {
+              "flexDirection": "row",
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            [
+              {
+                "flexBasis": 130,
+              },
+              {
+                "alignItems": "flex-end",
+              },
+            ]
+          }
+        >
+          <Text
+            style={
+              [
+                {
+                  "color": "#475569",
+                },
+                {
+                  "fontSize": 16,
+                },
+                {
+                  "fontFamily": "Raleway-Medium",
+                },
+              ]
+            }
+          >
+            HP
+          </Text>
+        </View>
+        <View
+          style={
+            [
+              {
+                "flexGrow": 1,
+              },
+              {
+                "justifyContent": "center",
+              },
+              [
+                {
+                  "marginLeft": 8,
+                },
+              ],
+            ]
+          }
+        >
+          <View
+            animated={true}
+            animationConfig={
+              {
+                "bounciness": 0,
+              }
+            }
+            animationType="spring"
+            indeterminate={false}
+            indeterminateAnimationDuration={1000}
+            onLayout={[Function]}
+            progress={0.17647058823529413}
+            style={
+              [
+                {
+                  "backgroundColor": undefined,
+                  "borderColor": "rgba(0, 122, 255, 1)",
+                  "borderRadius": 2,
+                  "borderWidth": 1,
+                  "overflow": "hidden",
+                  "width": 190,
+                },
+                undefined,
+              ]
+            }
+            useNativeDriver={false}
+          >
+            <View
+              collapsable={false}
+              style={
+                {
+                  "backgroundColor": "rgba(0, 122, 255, 1)",
+                  "height": 6,
+                  "transform": [
+                    {
+                      "translateX": 0,
+                    },
+                    {
+                      "translateX": -77.41176470588235,
+                    },
+                    {
+                      "scaleX": 0.17655294117647058,
+                    },
+                  ],
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        [
+          {
+            "marginBottom": 8,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          [
+            {
+              "display": "flex",
+            },
+            {
+              "flexDirection": "row",
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            [
+              {
+                "flexBasis": 130,
+              },
+              {
+                "alignItems": "flex-end",
+              },
+            ]
+          }
+        >
+          <Text
+            style={
+              [
+                {
+                  "color": "#475569",
+                },
+                {
+                  "fontSize": 16,
+                },
+                {
+                  "fontFamily": "Raleway-Medium",
+                },
+              ]
+            }
+          >
+            Attack
+          </Text>
+        </View>
+        <View
+          style={
+            [
+              {
+                "flexGrow": 1,
+              },
+              {
+                "justifyContent": "center",
+              },
+              [
+                {
+                  "marginLeft": 8,
+                },
+              ],
+            ]
+          }
+        >
+          <View
+            animated={true}
+            animationConfig={
+              {
+                "bounciness": 0,
+              }
+            }
+            animationType="spring"
+            indeterminate={false}
+            indeterminateAnimationDuration={1000}
+            onLayout={[Function]}
+            progress={0.19215686274509805}
+            style={
+              [
+                {
+                  "backgroundColor": undefined,
+                  "borderColor": "rgba(0, 122, 255, 1)",
+                  "borderRadius": 2,
+                  "borderWidth": 1,
+                  "overflow": "hidden",
+                  "width": 190,
+                },
+                undefined,
+              ]
+            }
+            useNativeDriver={false}
+          >
+            <View
+              collapsable={false}
+              style={
+                {
+                  "backgroundColor": "rgba(0, 122, 255, 1)",
+                  "height": 6,
+                  "transform": [
+                    {
+                      "translateX": 0,
+                    },
+                    {
+                      "translateX": -75.93725490196078,
+                    },
+                    {
+                      "scaleX": 0.19223764705882354,
+                    },
+                  ],
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        [
+          {
+            "marginBottom": 8,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          [
+            {
+              "display": "flex",
+            },
+            {
+              "flexDirection": "row",
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            [
+              {
+                "flexBasis": 130,
+              },
+              {
+                "alignItems": "flex-end",
+              },
+            ]
+          }
+        >
+          <Text
+            style={
+              [
+                {
+                  "color": "#475569",
+                },
+                {
+                  "fontSize": 16,
+                },
+                {
+                  "fontFamily": "Raleway-Medium",
+                },
+              ]
+            }
+          >
+            Defense
+          </Text>
+        </View>
+        <View
+          style={
+            [
+              {
+                "flexGrow": 1,
+              },
+              {
+                "justifyContent": "center",
+              },
+              [
+                {
+                  "marginLeft": 8,
+                },
+              ],
+            ]
+          }
+        >
+          <View
+            animated={true}
+            animationConfig={
+              {
+                "bounciness": 0,
+              }
+            }
+            animationType="spring"
+            indeterminate={false}
+            indeterminateAnimationDuration={1000}
+            onLayout={[Function]}
+            progress={0.19215686274509805}
+            style={
+              [
+                {
+                  "backgroundColor": undefined,
+                  "borderColor": "rgba(0, 122, 255, 1)",
+                  "borderRadius": 2,
+                  "borderWidth": 1,
+                  "overflow": "hidden",
+                  "width": 190,
+                },
+                undefined,
+              ]
+            }
+            useNativeDriver={false}
+          >
+            <View
+              collapsable={false}
+              style={
+                {
+                  "backgroundColor": "rgba(0, 122, 255, 1)",
+                  "height": 6,
+                  "transform": [
+                    {
+                      "translateX": 0,
+                    },
+                    {
+                      "translateX": -75.93725490196078,
+                    },
+                    {
+                      "scaleX": 0.19223764705882354,
+                    },
+                  ],
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        [
+          {
+            "marginBottom": 8,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          [
+            {
+              "display": "flex",
+            },
+            {
+              "flexDirection": "row",
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            [
+              {
+                "flexBasis": 130,
+              },
+              {
+                "alignItems": "flex-end",
+              },
+            ]
+          }
+        >
+          <Text
+            style={
+              [
+                {
+                  "color": "#475569",
+                },
+                {
+                  "fontSize": 16,
+                },
+                {
+                  "fontFamily": "Raleway-Medium",
+                },
+              ]
+            }
+          >
+            Special Attack
+          </Text>
+        </View>
+        <View
+          style={
+            [
+              {
+                "flexGrow": 1,
+              },
+              {
+                "justifyContent": "center",
+              },
+              [
+                {
+                  "marginLeft": 8,
+                },
+              ],
+            ]
+          }
+        >
+          <View
+            animated={true}
+            animationConfig={
+              {
+                "bounciness": 0,
+              }
+            }
+            animationType="spring"
+            indeterminate={false}
+            indeterminateAnimationDuration={1000}
+            onLayout={[Function]}
+            progress={0.2549019607843137}
+            style={
+              [
+                {
+                  "backgroundColor": undefined,
+                  "borderColor": "rgba(0, 122, 255, 1)",
+                  "borderRadius": 2,
+                  "borderWidth": 1,
+                  "overflow": "hidden",
+                  "width": 190,
+                },
+                undefined,
+              ]
+            }
+            useNativeDriver={false}
+          >
+            <View
+              collapsable={false}
+              style={
+                {
+                  "backgroundColor": "rgba(0, 122, 255, 1)",
+                  "height": 6,
+                  "transform": [
+                    {
+                      "translateX": 0,
+                    },
+                    {
+                      "translateX": -70.0392156862745,
+                    },
+                    {
+                      "scaleX": 0.25497647058823525,
+                    },
+                  ],
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        [
+          {
+            "marginBottom": 8,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          [
+            {
+              "display": "flex",
+            },
+            {
+              "flexDirection": "row",
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            [
+              {
+                "flexBasis": 130,
+              },
+              {
+                "alignItems": "flex-end",
+              },
+            ]
+          }
+        >
+          <Text
+            style={
+              [
+                {
+                  "color": "#475569",
+                },
+                {
+                  "fontSize": 16,
+                },
+                {
+                  "fontFamily": "Raleway-Medium",
+                },
+              ]
+            }
+          >
+            Special Defense
+          </Text>
+        </View>
+        <View
+          style={
+            [
+              {
+                "flexGrow": 1,
+              },
+              {
+                "justifyContent": "center",
+              },
+              [
+                {
+                  "marginLeft": 8,
+                },
+              ],
+            ]
+          }
+        >
+          <View
+            animated={true}
+            animationConfig={
+              {
+                "bounciness": 0,
+              }
+            }
+            animationType="spring"
+            indeterminate={false}
+            indeterminateAnimationDuration={1000}
+            onLayout={[Function]}
+            progress={0.2549019607843137}
+            style={
+              [
+                {
+                  "backgroundColor": undefined,
+                  "borderColor": "rgba(0, 122, 255, 1)",
+                  "borderRadius": 2,
+                  "borderWidth": 1,
+                  "overflow": "hidden",
+                  "width": 190,
+                },
+                undefined,
+              ]
+            }
+            useNativeDriver={false}
+          >
+            <View
+              collapsable={false}
+              style={
+                {
+                  "backgroundColor": "rgba(0, 122, 255, 1)",
+                  "height": 6,
+                  "transform": [
+                    {
+                      "translateX": 0,
+                    },
+                    {
+                      "translateX": -70.0392156862745,
+                    },
+                    {
+                      "scaleX": 0.25497647058823525,
+                    },
+                  ],
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        [
+          {
+            "marginBottom": 8,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          [
+            {
+              "display": "flex",
+            },
+            {
+              "flexDirection": "row",
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            [
+              {
+                "flexBasis": 130,
+              },
+              {
+                "alignItems": "flex-end",
+              },
+            ]
+          }
+        >
+          <Text
+            style={
+              [
+                {
+                  "color": "#475569",
+                },
+                {
+                  "fontSize": 16,
+                },
+                {
+                  "fontFamily": "Raleway-Medium",
+                },
+              ]
+            }
+          >
+            Speed
+          </Text>
+        </View>
+        <View
+          style={
+            [
+              {
+                "flexGrow": 1,
+              },
+              {
+                "justifyContent": "center",
+              },
+              [
+                {
+                  "marginLeft": 8,
+                },
+              ],
+            ]
+          }
+        >
+          <View
+            animated={true}
+            animationConfig={
+              {
+                "bounciness": 0,
+              }
+            }
+            animationType="spring"
+            indeterminate={false}
+            indeterminateAnimationDuration={1000}
+            onLayout={[Function]}
+            progress={0.17647058823529413}
+            style={
+              [
+                {
+                  "backgroundColor": undefined,
+                  "borderColor": "rgba(0, 122, 255, 1)",
+                  "borderRadius": 2,
+                  "borderWidth": 1,
+                  "overflow": "hidden",
+                  "width": 190,
+                },
+                undefined,
+              ]
+            }
+            useNativeDriver={false}
+          >
+            <View
+              collapsable={false}
+              style={
+                {
+                  "backgroundColor": "rgba(0, 122, 255, 1)",
+                  "height": 6,
+                  "transform": [
+                    {
+                      "translateX": 0,
+                    },
+                    {
+                      "translateX": -77.41176470588235,
+                    },
+                    {
+                      "scaleX": 0.17655294117647058,
+                    },
+                  ],
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+    </View>
+    <View>
+      <View
+        style={
+          [
+            {
+              "display": "flex",
+            },
+            {
+              "flexDirection": "row",
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            [
+              {
+                "flexBasis": 130,
+              },
+              {
+                "alignItems": "flex-end",
+              },
+            ]
+          }
+        >
+          <Text
+            style={
+              [
+                {
+                  "color": "#475569",
+                },
+                {
+                  "fontSize": 16,
+                },
+                {
+                  "fontFamily": "Raleway-Medium",
+                },
+              ]
+            }
+          >
+            Weight
+          </Text>
+        </View>
+        <View
+          style={
+            [
+              {
+                "flexGrow": 1,
+              },
+              {
+                "justifyContent": "center",
+              },
+              [
+                {
+                  "marginLeft": 8,
+                },
+              ],
+            ]
+          }
+        >
+          <View
+            animated={true}
+            animationConfig={
+              {
+                "bounciness": 0,
+              }
+            }
+            animationType="spring"
+            indeterminate={false}
+            indeterminateAnimationDuration={1000}
+            onLayout={[Function]}
+            progress={0.5307692307692308}
+            style={
+              [
+                {
+                  "backgroundColor": undefined,
+                  "borderColor": "rgba(0, 122, 255, 1)",
+                  "borderRadius": 2,
+                  "borderWidth": 1,
+                  "overflow": "hidden",
+                  "width": 190,
+                },
+                undefined,
+              ]
+            }
+            useNativeDriver={false}
+          >
+            <View
+              collapsable={false}
+              style={
+                {
+                  "backgroundColor": "rgba(0, 122, 255, 1)",
+                  "height": 6,
+                  "transform": [
+                    {
+                      "translateX": 0,
+                    },
+                    {
+                      "translateX": -44.10769230769231,
+                    },
+                    {
+                      "scaleX": 0.5308161538461539,
+                    },
+                  ],
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`renders StatView with ownedId correctly 1`] = `
+<View
+  style={
+    [
+      {
+        "backgroundColor": "#f3f4f6",
+      },
+      {
+        "paddingBottom": 16,
+        "paddingLeft": 16,
+        "paddingRight": 16,
+        "paddingTop": 16,
+      },
+      {
+        "borderBottomLeftRadius": 4,
+        "borderBottomRightRadius": 4,
+        "borderTopLeftRadius": 4,
+        "borderTopRightRadius": 4,
+      },
+      {
+        "width": "100%",
+      },
+    ]
+  }
+  testID="StatView"
+>
+  <View
+    style={
+      [
+        {
+          "display": "flex",
+        },
+        {
+          "borderBottomColor": "#d1d5db",
+        },
+        {
+          "borderBottomWidth": 1,
+        },
+        {
+          "paddingBottom": 4,
+        },
+        {
+          "marginBottom": 8,
+        },
+        {
+          "alignItems": "center",
+        },
+      ]
+    }
+  >
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "opacity": 1,
+          "position": "absolute",
+          "right": 0,
+          "top": 8,
+        }
+      }
+      testID="DeletePokemonButton"
+    >
+      <Text
+        allowFontScaling={false}
+        selectable={false}
+        style={
+          [
+            {
+              "color": "#FF0000",
+              "fontSize": 24,
+            },
+            undefined,
+            {
+              "fontFamily": "anticon",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            {},
+          ]
+        }
+      >
+        
+      </Text>
+    </View>
+    <Text
+      style={
+        [
+          {
+            "color": "#475569",
+          },
+          {
+            "fontFamily": "Raleway-Bold",
+          },
+          {
+            "fontSize": 28,
+          },
+        ]
+      }
+    >
+      Bulbasaur
+    </Text>
+  </View>
+  <View
+    style={
+      [
+        {
+          "width": "100%",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        [
+          {
+            "marginBottom": 8,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          [
+            {
+              "display": "flex",
+            },
+            {
+              "flexDirection": "row",
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            [
+              {
+                "flexBasis": 130,
+              },
+              {
+                "alignItems": "flex-end",
+              },
+            ]
+          }
+        >
+          <Text
+            style={
+              [
+                {
+                  "color": "#475569",
+                },
+                {
+                  "fontSize": 16,
+                },
+                {
+                  "fontFamily": "Raleway-Medium",
+                },
+              ]
+            }
+          >
+            HP
+          </Text>
+        </View>
+        <View
+          style={
+            [
+              {
+                "flexGrow": 1,
+              },
+              {
+                "justifyContent": "center",
+              },
+              [
+                {
+                  "marginLeft": 8,
+                },
+              ],
+            ]
+          }
+        >
+          <View
+            animated={true}
+            animationConfig={
+              {
+                "bounciness": 0,
+              }
+            }
+            animationType="spring"
+            indeterminate={false}
+            indeterminateAnimationDuration={1000}
+            onLayout={[Function]}
+            progress={0.17647058823529413}
+            style={
+              [
+                {
+                  "backgroundColor": undefined,
+                  "borderColor": "rgba(0, 122, 255, 1)",
+                  "borderRadius": 2,
+                  "borderWidth": 1,
+                  "overflow": "hidden",
+                  "width": 190,
+                },
+                undefined,
+              ]
+            }
+            useNativeDriver={false}
+          >
+            <View
+              collapsable={false}
+              style={
+                {
+                  "backgroundColor": "rgba(0, 122, 255, 1)",
+                  "height": 6,
+                  "transform": [
+                    {
+                      "translateX": 0,
+                    },
+                    {
+                      "translateX": -77.41176470588235,
+                    },
+                    {
+                      "scaleX": 0.17655294117647058,
+                    },
+                  ],
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        [
+          {
+            "marginBottom": 8,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          [
+            {
+              "display": "flex",
+            },
+            {
+              "flexDirection": "row",
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            [
+              {
+                "flexBasis": 130,
+              },
+              {
+                "alignItems": "flex-end",
+              },
+            ]
+          }
+        >
+          <Text
+            style={
+              [
+                {
+                  "color": "#475569",
+                },
+                {
+                  "fontSize": 16,
+                },
+                {
+                  "fontFamily": "Raleway-Medium",
+                },
+              ]
+            }
+          >
+            Attack
+          </Text>
+        </View>
+        <View
+          style={
+            [
+              {
+                "flexGrow": 1,
+              },
+              {
+                "justifyContent": "center",
+              },
+              [
+                {
+                  "marginLeft": 8,
+                },
+              ],
+            ]
+          }
+        >
+          <View
+            animated={true}
+            animationConfig={
+              {
+                "bounciness": 0,
+              }
+            }
+            animationType="spring"
+            indeterminate={false}
+            indeterminateAnimationDuration={1000}
+            onLayout={[Function]}
+            progress={0.19215686274509805}
+            style={
+              [
+                {
+                  "backgroundColor": undefined,
+                  "borderColor": "rgba(0, 122, 255, 1)",
+                  "borderRadius": 2,
+                  "borderWidth": 1,
+                  "overflow": "hidden",
+                  "width": 190,
+                },
+                undefined,
+              ]
+            }
+            useNativeDriver={false}
+          >
+            <View
+              collapsable={false}
+              style={
+                {
+                  "backgroundColor": "rgba(0, 122, 255, 1)",
+                  "height": 6,
+                  "transform": [
+                    {
+                      "translateX": 0,
+                    },
+                    {
+                      "translateX": -75.93725490196078,
+                    },
+                    {
+                      "scaleX": 0.19223764705882354,
+                    },
+                  ],
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        [
+          {
+            "marginBottom": 8,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          [
+            {
+              "display": "flex",
+            },
+            {
+              "flexDirection": "row",
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            [
+              {
+                "flexBasis": 130,
+              },
+              {
+                "alignItems": "flex-end",
+              },
+            ]
+          }
+        >
+          <Text
+            style={
+              [
+                {
+                  "color": "#475569",
+                },
+                {
+                  "fontSize": 16,
+                },
+                {
+                  "fontFamily": "Raleway-Medium",
+                },
+              ]
+            }
+          >
+            Defense
+          </Text>
+        </View>
+        <View
+          style={
+            [
+              {
+                "flexGrow": 1,
+              },
+              {
+                "justifyContent": "center",
+              },
+              [
+                {
+                  "marginLeft": 8,
+                },
+              ],
+            ]
+          }
+        >
+          <View
+            animated={true}
+            animationConfig={
+              {
+                "bounciness": 0,
+              }
+            }
+            animationType="spring"
+            indeterminate={false}
+            indeterminateAnimationDuration={1000}
+            onLayout={[Function]}
+            progress={0.19215686274509805}
+            style={
+              [
+                {
+                  "backgroundColor": undefined,
+                  "borderColor": "rgba(0, 122, 255, 1)",
+                  "borderRadius": 2,
+                  "borderWidth": 1,
+                  "overflow": "hidden",
+                  "width": 190,
+                },
+                undefined,
+              ]
+            }
+            useNativeDriver={false}
+          >
+            <View
+              collapsable={false}
+              style={
+                {
+                  "backgroundColor": "rgba(0, 122, 255, 1)",
+                  "height": 6,
+                  "transform": [
+                    {
+                      "translateX": 0,
+                    },
+                    {
+                      "translateX": -75.93725490196078,
+                    },
+                    {
+                      "scaleX": 0.19223764705882354,
+                    },
+                  ],
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        [
+          {
+            "marginBottom": 8,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          [
+            {
+              "display": "flex",
+            },
+            {
+              "flexDirection": "row",
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            [
+              {
+                "flexBasis": 130,
+              },
+              {
+                "alignItems": "flex-end",
+              },
+            ]
+          }
+        >
+          <Text
+            style={
+              [
+                {
+                  "color": "#475569",
+                },
+                {
+                  "fontSize": 16,
+                },
+                {
+                  "fontFamily": "Raleway-Medium",
+                },
+              ]
+            }
+          >
+            Special Attack
+          </Text>
+        </View>
+        <View
+          style={
+            [
+              {
+                "flexGrow": 1,
+              },
+              {
+                "justifyContent": "center",
+              },
+              [
+                {
+                  "marginLeft": 8,
+                },
+              ],
+            ]
+          }
+        >
+          <View
+            animated={true}
+            animationConfig={
+              {
+                "bounciness": 0,
+              }
+            }
+            animationType="spring"
+            indeterminate={false}
+            indeterminateAnimationDuration={1000}
+            onLayout={[Function]}
+            progress={0.2549019607843137}
+            style={
+              [
+                {
+                  "backgroundColor": undefined,
+                  "borderColor": "rgba(0, 122, 255, 1)",
+                  "borderRadius": 2,
+                  "borderWidth": 1,
+                  "overflow": "hidden",
+                  "width": 190,
+                },
+                undefined,
+              ]
+            }
+            useNativeDriver={false}
+          >
+            <View
+              collapsable={false}
+              style={
+                {
+                  "backgroundColor": "rgba(0, 122, 255, 1)",
+                  "height": 6,
+                  "transform": [
+                    {
+                      "translateX": 0,
+                    },
+                    {
+                      "translateX": -70.0392156862745,
+                    },
+                    {
+                      "scaleX": 0.25497647058823525,
+                    },
+                  ],
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        [
+          {
+            "marginBottom": 8,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          [
+            {
+              "display": "flex",
+            },
+            {
+              "flexDirection": "row",
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            [
+              {
+                "flexBasis": 130,
+              },
+              {
+                "alignItems": "flex-end",
+              },
+            ]
+          }
+        >
+          <Text
+            style={
+              [
+                {
+                  "color": "#475569",
+                },
+                {
+                  "fontSize": 16,
+                },
+                {
+                  "fontFamily": "Raleway-Medium",
+                },
+              ]
+            }
+          >
+            Special Defense
+          </Text>
+        </View>
+        <View
+          style={
+            [
+              {
+                "flexGrow": 1,
+              },
+              {
+                "justifyContent": "center",
+              },
+              [
+                {
+                  "marginLeft": 8,
+                },
+              ],
+            ]
+          }
+        >
+          <View
+            animated={true}
+            animationConfig={
+              {
+                "bounciness": 0,
+              }
+            }
+            animationType="spring"
+            indeterminate={false}
+            indeterminateAnimationDuration={1000}
+            onLayout={[Function]}
+            progress={0.2549019607843137}
+            style={
+              [
+                {
+                  "backgroundColor": undefined,
+                  "borderColor": "rgba(0, 122, 255, 1)",
+                  "borderRadius": 2,
+                  "borderWidth": 1,
+                  "overflow": "hidden",
+                  "width": 190,
+                },
+                undefined,
+              ]
+            }
+            useNativeDriver={false}
+          >
+            <View
+              collapsable={false}
+              style={
+                {
+                  "backgroundColor": "rgba(0, 122, 255, 1)",
+                  "height": 6,
+                  "transform": [
+                    {
+                      "translateX": 0,
+                    },
+                    {
+                      "translateX": -70.0392156862745,
+                    },
+                    {
+                      "scaleX": 0.25497647058823525,
+                    },
+                  ],
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        [
+          {
+            "marginBottom": 8,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          [
+            {
+              "display": "flex",
+            },
+            {
+              "flexDirection": "row",
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            [
+              {
+                "flexBasis": 130,
+              },
+              {
+                "alignItems": "flex-end",
+              },
+            ]
+          }
+        >
+          <Text
+            style={
+              [
+                {
+                  "color": "#475569",
+                },
+                {
+                  "fontSize": 16,
+                },
+                {
+                  "fontFamily": "Raleway-Medium",
+                },
+              ]
+            }
+          >
+            Speed
+          </Text>
+        </View>
+        <View
+          style={
+            [
+              {
+                "flexGrow": 1,
+              },
+              {
+                "justifyContent": "center",
+              },
+              [
+                {
+                  "marginLeft": 8,
+                },
+              ],
+            ]
+          }
+        >
+          <View
+            animated={true}
+            animationConfig={
+              {
+                "bounciness": 0,
+              }
+            }
+            animationType="spring"
+            indeterminate={false}
+            indeterminateAnimationDuration={1000}
+            onLayout={[Function]}
+            progress={0.17647058823529413}
+            style={
+              [
+                {
+                  "backgroundColor": undefined,
+                  "borderColor": "rgba(0, 122, 255, 1)",
+                  "borderRadius": 2,
+                  "borderWidth": 1,
+                  "overflow": "hidden",
+                  "width": 190,
+                },
+                undefined,
+              ]
+            }
+            useNativeDriver={false}
+          >
+            <View
+              collapsable={false}
+              style={
+                {
+                  "backgroundColor": "rgba(0, 122, 255, 1)",
+                  "height": 6,
+                  "transform": [
+                    {
+                      "translateX": 0,
+                    },
+                    {
+                      "translateX": -77.41176470588235,
+                    },
+                    {
+                      "scaleX": 0.17655294117647058,
+                    },
+                  ],
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+    </View>
+    <View>
+      <View
+        style={
+          [
+            {
+              "display": "flex",
+            },
+            {
+              "flexDirection": "row",
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            [
+              {
+                "flexBasis": 130,
+              },
+              {
+                "alignItems": "flex-end",
+              },
+            ]
+          }
+        >
+          <Text
+            style={
+              [
+                {
+                  "color": "#475569",
+                },
+                {
+                  "fontSize": 16,
+                },
+                {
+                  "fontFamily": "Raleway-Medium",
+                },
+              ]
+            }
+          >
+            Weight
+          </Text>
+        </View>
+        <View
+          style={
+            [
+              {
+                "flexGrow": 1,
+              },
+              {
+                "justifyContent": "center",
+              },
+              [
+                {
+                  "marginLeft": 8,
+                },
+              ],
+            ]
+          }
+        >
+          <View
+            animated={true}
+            animationConfig={
+              {
+                "bounciness": 0,
+              }
+            }
+            animationType="spring"
+            indeterminate={false}
+            indeterminateAnimationDuration={1000}
+            onLayout={[Function]}
+            progress={0.5307692307692308}
+            style={
+              [
+                {
+                  "backgroundColor": undefined,
+                  "borderColor": "rgba(0, 122, 255, 1)",
+                  "borderRadius": 2,
+                  "borderWidth": 1,
+                  "overflow": "hidden",
+                  "width": 190,
+                },
+                undefined,
+              ]
+            }
+            useNativeDriver={false}
+          >
+            <View
+              collapsable={false}
+              style={
+                {
+                  "backgroundColor": "rgba(0, 122, 255, 1)",
+                  "height": 6,
+                  "transform": [
+                    {
+                      "translateX": 0,
+                    },
+                    {
+                      "translateX": -44.10769230769231,
+                    },
+                    {
+                      "scaleX": 0.5308161538461539,
+                    },
+                  ],
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`renders StatView without maxWeight 1`] = `
+<View
+  style={
+    [
+      {
+        "backgroundColor": "#f3f4f6",
+      },
+      {
+        "paddingBottom": 16,
+        "paddingLeft": 16,
+        "paddingRight": 16,
+        "paddingTop": 16,
+      },
+      {
+        "borderBottomLeftRadius": 4,
+        "borderBottomRightRadius": 4,
+        "borderTopLeftRadius": 4,
+        "borderTopRightRadius": 4,
+      },
+      {
+        "width": "100%",
+      },
+    ]
+  }
+  testID="StatView"
+>
+  <View
+    style={
+      [
+        {
+          "display": "flex",
+        },
+        {
+          "borderBottomColor": "#d1d5db",
+        },
+        {
+          "borderBottomWidth": 1,
+        },
+        {
+          "paddingBottom": 4,
+        },
+        {
+          "marginBottom": 8,
+        },
+        {
+          "alignItems": "center",
+        },
+      ]
+    }
+  >
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "opacity": 1,
+          "position": "absolute",
+          "right": 0,
+          "top": 8,
+        }
+      }
+      testID="DeletePokemonButton"
+    >
+      <Text
+        allowFontScaling={false}
+        selectable={false}
+        style={
+          [
+            {
+              "color": "#FF0000",
+              "fontSize": 24,
+            },
+            undefined,
+            {
+              "fontFamily": "anticon",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            {},
+          ]
+        }
+      >
+        
+      </Text>
+    </View>
+    <Text
+      style={
+        [
+          {
+            "color": "#475569",
+          },
+          {
+            "fontFamily": "Raleway-Bold",
+          },
+          {
+            "fontSize": 28,
+          },
+        ]
+      }
+    >
+      Bulbasaur
+    </Text>
+  </View>
+  <View
+    style={
+      [
+        {
+          "width": "100%",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        [
+          {
+            "marginBottom": 8,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          [
+            {
+              "display": "flex",
+            },
+            {
+              "flexDirection": "row",
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            [
+              {
+                "flexBasis": 130,
+              },
+              {
+                "alignItems": "flex-end",
+              },
+            ]
+          }
+        >
+          <Text
+            style={
+              [
+                {
+                  "color": "#475569",
+                },
+                {
+                  "fontSize": 16,
+                },
+                {
+                  "fontFamily": "Raleway-Medium",
+                },
+              ]
+            }
+          >
+            HP
+          </Text>
+        </View>
+        <View
+          style={
+            [
+              {
+                "flexGrow": 1,
+              },
+              {
+                "justifyContent": "center",
+              },
+              [
+                {
+                  "marginLeft": 8,
+                },
+              ],
+            ]
+          }
+        >
+          <View
+            animated={true}
+            animationConfig={
+              {
+                "bounciness": 0,
+              }
+            }
+            animationType="spring"
+            indeterminate={false}
+            indeterminateAnimationDuration={1000}
+            onLayout={[Function]}
+            progress={0.17647058823529413}
+            style={
+              [
+                {
+                  "backgroundColor": undefined,
+                  "borderColor": "rgba(0, 122, 255, 1)",
+                  "borderRadius": 2,
+                  "borderWidth": 1,
+                  "overflow": "hidden",
+                  "width": 190,
+                },
+                undefined,
+              ]
+            }
+            useNativeDriver={false}
+          >
+            <View
+              collapsable={false}
+              style={
+                {
+                  "backgroundColor": "rgba(0, 122, 255, 1)",
+                  "height": 6,
+                  "transform": [
+                    {
+                      "translateX": 0,
+                    },
+                    {
+                      "translateX": -77.41176470588235,
+                    },
+                    {
+                      "scaleX": 0.17655294117647058,
+                    },
+                  ],
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        [
+          {
+            "marginBottom": 8,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          [
+            {
+              "display": "flex",
+            },
+            {
+              "flexDirection": "row",
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            [
+              {
+                "flexBasis": 130,
+              },
+              {
+                "alignItems": "flex-end",
+              },
+            ]
+          }
+        >
+          <Text
+            style={
+              [
+                {
+                  "color": "#475569",
+                },
+                {
+                  "fontSize": 16,
+                },
+                {
+                  "fontFamily": "Raleway-Medium",
+                },
+              ]
+            }
+          >
+            Attack
+          </Text>
+        </View>
+        <View
+          style={
+            [
+              {
+                "flexGrow": 1,
+              },
+              {
+                "justifyContent": "center",
+              },
+              [
+                {
+                  "marginLeft": 8,
+                },
+              ],
+            ]
+          }
+        >
+          <View
+            animated={true}
+            animationConfig={
+              {
+                "bounciness": 0,
+              }
+            }
+            animationType="spring"
+            indeterminate={false}
+            indeterminateAnimationDuration={1000}
+            onLayout={[Function]}
+            progress={0.19215686274509805}
+            style={
+              [
+                {
+                  "backgroundColor": undefined,
+                  "borderColor": "rgba(0, 122, 255, 1)",
+                  "borderRadius": 2,
+                  "borderWidth": 1,
+                  "overflow": "hidden",
+                  "width": 190,
+                },
+                undefined,
+              ]
+            }
+            useNativeDriver={false}
+          >
+            <View
+              collapsable={false}
+              style={
+                {
+                  "backgroundColor": "rgba(0, 122, 255, 1)",
+                  "height": 6,
+                  "transform": [
+                    {
+                      "translateX": 0,
+                    },
+                    {
+                      "translateX": -75.93725490196078,
+                    },
+                    {
+                      "scaleX": 0.19223764705882354,
+                    },
+                  ],
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        [
+          {
+            "marginBottom": 8,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          [
+            {
+              "display": "flex",
+            },
+            {
+              "flexDirection": "row",
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            [
+              {
+                "flexBasis": 130,
+              },
+              {
+                "alignItems": "flex-end",
+              },
+            ]
+          }
+        >
+          <Text
+            style={
+              [
+                {
+                  "color": "#475569",
+                },
+                {
+                  "fontSize": 16,
+                },
+                {
+                  "fontFamily": "Raleway-Medium",
+                },
+              ]
+            }
+          >
+            Defense
+          </Text>
+        </View>
+        <View
+          style={
+            [
+              {
+                "flexGrow": 1,
+              },
+              {
+                "justifyContent": "center",
+              },
+              [
+                {
+                  "marginLeft": 8,
+                },
+              ],
+            ]
+          }
+        >
+          <View
+            animated={true}
+            animationConfig={
+              {
+                "bounciness": 0,
+              }
+            }
+            animationType="spring"
+            indeterminate={false}
+            indeterminateAnimationDuration={1000}
+            onLayout={[Function]}
+            progress={0.19215686274509805}
+            style={
+              [
+                {
+                  "backgroundColor": undefined,
+                  "borderColor": "rgba(0, 122, 255, 1)",
+                  "borderRadius": 2,
+                  "borderWidth": 1,
+                  "overflow": "hidden",
+                  "width": 190,
+                },
+                undefined,
+              ]
+            }
+            useNativeDriver={false}
+          >
+            <View
+              collapsable={false}
+              style={
+                {
+                  "backgroundColor": "rgba(0, 122, 255, 1)",
+                  "height": 6,
+                  "transform": [
+                    {
+                      "translateX": 0,
+                    },
+                    {
+                      "translateX": -75.93725490196078,
+                    },
+                    {
+                      "scaleX": 0.19223764705882354,
+                    },
+                  ],
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        [
+          {
+            "marginBottom": 8,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          [
+            {
+              "display": "flex",
+            },
+            {
+              "flexDirection": "row",
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            [
+              {
+                "flexBasis": 130,
+              },
+              {
+                "alignItems": "flex-end",
+              },
+            ]
+          }
+        >
+          <Text
+            style={
+              [
+                {
+                  "color": "#475569",
+                },
+                {
+                  "fontSize": 16,
+                },
+                {
+                  "fontFamily": "Raleway-Medium",
+                },
+              ]
+            }
+          >
+            Special Attack
+          </Text>
+        </View>
+        <View
+          style={
+            [
+              {
+                "flexGrow": 1,
+              },
+              {
+                "justifyContent": "center",
+              },
+              [
+                {
+                  "marginLeft": 8,
+                },
+              ],
+            ]
+          }
+        >
+          <View
+            animated={true}
+            animationConfig={
+              {
+                "bounciness": 0,
+              }
+            }
+            animationType="spring"
+            indeterminate={false}
+            indeterminateAnimationDuration={1000}
+            onLayout={[Function]}
+            progress={0.2549019607843137}
+            style={
+              [
+                {
+                  "backgroundColor": undefined,
+                  "borderColor": "rgba(0, 122, 255, 1)",
+                  "borderRadius": 2,
+                  "borderWidth": 1,
+                  "overflow": "hidden",
+                  "width": 190,
+                },
+                undefined,
+              ]
+            }
+            useNativeDriver={false}
+          >
+            <View
+              collapsable={false}
+              style={
+                {
+                  "backgroundColor": "rgba(0, 122, 255, 1)",
+                  "height": 6,
+                  "transform": [
+                    {
+                      "translateX": 0,
+                    },
+                    {
+                      "translateX": -70.0392156862745,
+                    },
+                    {
+                      "scaleX": 0.25497647058823525,
+                    },
+                  ],
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        [
+          {
+            "marginBottom": 8,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          [
+            {
+              "display": "flex",
+            },
+            {
+              "flexDirection": "row",
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            [
+              {
+                "flexBasis": 130,
+              },
+              {
+                "alignItems": "flex-end",
+              },
+            ]
+          }
+        >
+          <Text
+            style={
+              [
+                {
+                  "color": "#475569",
+                },
+                {
+                  "fontSize": 16,
+                },
+                {
+                  "fontFamily": "Raleway-Medium",
+                },
+              ]
+            }
+          >
+            Special Defense
+          </Text>
+        </View>
+        <View
+          style={
+            [
+              {
+                "flexGrow": 1,
+              },
+              {
+                "justifyContent": "center",
+              },
+              [
+                {
+                  "marginLeft": 8,
+                },
+              ],
+            ]
+          }
+        >
+          <View
+            animated={true}
+            animationConfig={
+              {
+                "bounciness": 0,
+              }
+            }
+            animationType="spring"
+            indeterminate={false}
+            indeterminateAnimationDuration={1000}
+            onLayout={[Function]}
+            progress={0.2549019607843137}
+            style={
+              [
+                {
+                  "backgroundColor": undefined,
+                  "borderColor": "rgba(0, 122, 255, 1)",
+                  "borderRadius": 2,
+                  "borderWidth": 1,
+                  "overflow": "hidden",
+                  "width": 190,
+                },
+                undefined,
+              ]
+            }
+            useNativeDriver={false}
+          >
+            <View
+              collapsable={false}
+              style={
+                {
+                  "backgroundColor": "rgba(0, 122, 255, 1)",
+                  "height": 6,
+                  "transform": [
+                    {
+                      "translateX": 0,
+                    },
+                    {
+                      "translateX": -70.0392156862745,
+                    },
+                    {
+                      "scaleX": 0.25497647058823525,
+                    },
+                  ],
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        [
+          {
+            "marginBottom": 8,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          [
+            {
+              "display": "flex",
+            },
+            {
+              "flexDirection": "row",
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            [
+              {
+                "flexBasis": 130,
+              },
+              {
+                "alignItems": "flex-end",
+              },
+            ]
+          }
+        >
+          <Text
+            style={
+              [
+                {
+                  "color": "#475569",
+                },
+                {
+                  "fontSize": 16,
+                },
+                {
+                  "fontFamily": "Raleway-Medium",
+                },
+              ]
+            }
+          >
+            Speed
+          </Text>
+        </View>
+        <View
+          style={
+            [
+              {
+                "flexGrow": 1,
+              },
+              {
+                "justifyContent": "center",
+              },
+              [
+                {
+                  "marginLeft": 8,
+                },
+              ],
+            ]
+          }
+        >
+          <View
+            animated={true}
+            animationConfig={
+              {
+                "bounciness": 0,
+              }
+            }
+            animationType="spring"
+            indeterminate={false}
+            indeterminateAnimationDuration={1000}
+            onLayout={[Function]}
+            progress={0.17647058823529413}
+            style={
+              [
+                {
+                  "backgroundColor": undefined,
+                  "borderColor": "rgba(0, 122, 255, 1)",
+                  "borderRadius": 2,
+                  "borderWidth": 1,
+                  "overflow": "hidden",
+                  "width": 190,
+                },
+                undefined,
+              ]
+            }
+            useNativeDriver={false}
+          >
+            <View
+              collapsable={false}
+              style={
+                {
+                  "backgroundColor": "rgba(0, 122, 255, 1)",
+                  "height": 6,
+                  "transform": [
+                    {
+                      "translateX": 0,
+                    },
+                    {
+                      "translateX": -77.41176470588235,
+                    },
+                    {
+                      "scaleX": 0.17655294117647058,
+                    },
+                  ],
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+    </View>
+    <View>
+      <View
+        style={
+          [
+            {
+              "display": "flex",
+            },
+            {
+              "flexDirection": "row",
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            [
+              {
+                "flexBasis": 130,
+              },
+              {
+                "alignItems": "flex-end",
+              },
+            ]
+          }
+        >
+          <Text
+            style={
+              [
+                {
+                  "color": "#475569",
+                },
+                {
+                  "fontSize": 16,
+                },
+                {
+                  "fontFamily": "Raleway-Medium",
+                },
+              ]
+            }
+          >
+            Weight
+          </Text>
+        </View>
+        <View
+          style={
+            [
+              {
+                "flexGrow": 1,
+              },
+              {
+                "justifyContent": "center",
+              },
+              [
+                {
+                  "marginLeft": 8,
+                },
+              ],
+            ]
+          }
+        >
+          <View
+            animated={true}
+            animationConfig={
+              {
+                "bounciness": 0,
+              }
+            }
+            animationType="spring"
+            indeterminate={false}
+            indeterminateAnimationDuration={1000}
+            onLayout={[Function]}
+            progress={1}
+            style={
+              [
+                {
+                  "backgroundColor": undefined,
+                  "borderColor": "rgba(0, 122, 255, 1)",
+                  "borderRadius": 2,
+                  "borderWidth": 1,
+                  "overflow": "hidden",
+                  "width": 190,
+                },
+                undefined,
+              ]
+            }
+            useNativeDriver={false}
+          >
+            <View
+              collapsable={false}
+              style={
+                {
+                  "backgroundColor": "rgba(0, 122, 255, 1)",
+                  "height": 6,
+                  "transform": [
+                    {
+                      "translateX": 0,
+                    },
+                    {
+                      "translateX": 0,
+                    },
+                    {
+                      "scaleX": 1,
+                    },
+                  ],
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;

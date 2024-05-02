@@ -16,10 +16,11 @@ export default function StatView({
   nextEvolution,
 }: StatViewProps) {
   return (
-    <View className="bg-gray-100 p-4 rounded w-full">
+    <View testID="StatView" className="bg-gray-100 p-4 rounded w-full">
       <View className="flex border-b-gray-300 border-b pb-1 mb-2 items-center">
         {!!owned && (
           <IconButton
+            testID="DeletePokemonButton"
             color="#FF0000"
             className="absolute top-2 right-0"
             iconName="delete"
@@ -46,10 +47,9 @@ export default function StatView({
         ownedId !== undefined ? (
           <View>
             <TouchableOpacity
+              testID="EvolutionButton"
               onPress={() => {
-                if (ownedId) {
-                  onEvolution?.(ownedId);
-                }
+                onEvolution?.(ownedId);
               }}
               className="bg-amber-500 px-4 py-2 rounded justify-center items-center">
               <Text className="font-[Raleway-Bold] text-[18px] text-white">

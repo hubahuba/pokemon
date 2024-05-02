@@ -12,15 +12,27 @@ export default function ViewModel(): DetailViewModelProps {
   const [showBerry, setShowBerry] = useState(false);
   const {data} = route.params;
 
-  let berries: BerryData[] | string | undefined =
-    services.storage.getItem('berries');
-  if (berries && typeof berries === 'string') {
-    berries = JSON.parse(berries);
-  }
+  const berries = services.useCase.pokemon.getBerries();
 
   const iChooseU = () => {
     const newData = services.useCase.gameAction.iChooseYou(data);
     navigation.navigate('Detail', {data: newData});
+  };
+
+  const callbackCancel = () => {
+    Popup.hide();
+  };
+
+  const closePokemon = () => {
+    navigation.goBack();
+  };
+
+  const callbackDelete = () => {
+    Popup.hide();
+    setTimeout(() => {
+      services.useCase.gameAction.deletePokemon(data.ownedId);
+      navigation.goBack();
+    }, 300);
   };
 
   const deletePokemon = () => {
@@ -47,16 +59,8 @@ export default function ViewModel(): DetailViewModelProps {
       descTextStyle: {
         fontFamily: 'Raleway-Medium',
       },
-      callback: () => {
-        Popup.hide();
-        setTimeout(() => {
-          services.useCase.gameAction.deletePokemon(data.ownedId);
-          navigation.goBack();
-        }, 300);
-      },
-      cancelCallback: () => {
-        Popup.hide();
-      },
+      callback: callbackDelete,
+      cancelCallback: callbackCancel,
     });
   };
 
@@ -78,9 +82,10 @@ export default function ViewModel(): DetailViewModelProps {
   return {
     data,
     navigation,
+    closePokemon,
     iChooseU,
     deletePokemon,
-    berries,
+    berries: berries.data,
     showBerry,
     setShowBerry,
     feedPokemon,

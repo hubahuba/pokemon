@@ -1,0 +1,703 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PokemonBerries renders PokemonBerries correctly 1`] = `
+<View
+  collapsable={false}
+  entering={[Function]}
+  exiting={[Function]}
+  jestAnimatedStyle={
+    {
+      "value": {},
+    }
+  }
+  onLayout={[Function]}
+  testID="PokemonBerriesWrapper"
+>
+  <View
+    style={
+      {
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      style={
+        {
+          "flex": 1,
+        }
+      }
+    >
+      <View
+        collapsable={false}
+        forwardedRef={[Function]}
+        handlerTag={1}
+        handlerType="PanGestureHandler"
+        jestAnimatedStyle={
+          {
+            "value": {},
+          }
+        }
+        onGestureHandlerEvent={[Function]}
+        onTouchEnd={[Function]}
+        onTouchStart={[Function]}
+        style={
+          {
+            "flexDirection": "row",
+            "height": 0,
+            "overflow": "hidden",
+            "width": "100%",
+          }
+        }
+      >
+        <View
+          collapsable={false}
+          jestAnimatedStyle={
+            {
+              "value": {
+                "transform": [
+                  {
+                    "translateX": -40,
+                  },
+                  {
+                    "translateY": 30,
+                  },
+                  {
+                    "scale": 1.1,
+                  },
+                ],
+              },
+            }
+          }
+          style={
+            {
+              "height": 80,
+              "position": "absolute",
+              "transform": [
+                {
+                  "translateX": -40,
+                },
+                {
+                  "translateY": 30,
+                },
+                {
+                  "scale": 1.1,
+                },
+              ],
+              "width": 80,
+            }
+          }
+          testID="__CAROUSEL_ITEM_0_READY__"
+        >
+          <RNGestureHandlerButton
+            collapsable={false}
+            delayLongPress={600}
+            enabled={true}
+            exclusive={true}
+            handlerTag={2}
+            handlerType="NativeViewGestureHandler"
+            onGestureEvent={[Function]}
+            onGestureHandlerEvent={[Function]}
+            onGestureHandlerStateChange={[Function]}
+            onHandlerStateChange={[Function]}
+            rippleColor={0}
+            testID="SelectBerry"
+            touchSoundDisabled={false}
+          >
+            <View
+              accessible={true}
+              collapsable={false}
+              style={
+                {
+                  "height": "100%",
+                  "opacity": 1,
+                  "width": "100%",
+                }
+              }
+            >
+              <View
+                style={
+                  [
+                    {
+                      "display": "flex",
+                    },
+                    {
+                      "flexBasis": "0%",
+                      "flexGrow": 1,
+                      "flexShrink": 1,
+                    },
+                    {
+                      "paddingBottom": 2,
+                      "paddingLeft": 2,
+                      "paddingRight": 2,
+                      "paddingTop": 2,
+                    },
+                    {
+                      "borderBottomLeftRadius": 9999,
+                      "borderBottomRightRadius": 9999,
+                      "borderTopLeftRadius": 9999,
+                      "borderTopRightRadius": 9999,
+                    },
+                    {
+                      "backgroundColor": "#f3f4f6",
+                    },
+                    {
+                      "justifyContent": "center",
+                    },
+                    {
+                      "alignItems": "center",
+                    },
+                    {
+                      "overflow": "hidden",
+                    },
+                  ]
+                }
+              >
+                <View
+                  style={
+                    [
+                      {
+                        "overflow": "hidden",
+                      },
+                      [
+                        {
+                          "width": "100%",
+                        },
+                        {
+                          "height": "100%",
+                        },
+                      ],
+                    ]
+                  }
+                >
+                  <FastImageView
+                    defaultSource={
+                      {
+                        "testUri": "../../../app/assets/images/berry.png",
+                      }
+                    }
+                    resizeMode="cover"
+                    style={
+                      {
+                        "bottom": 0,
+                        "left": 0,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                      }
+                    }
+                  />
+                </View>
+              </View>
+            </View>
+          </RNGestureHandlerButton>
+        </View>
+        <View
+          collapsable={false}
+          jestAnimatedStyle={
+            {
+              "value": {
+                "transform": [
+                  {
+                    "translateX": 40,
+                  },
+                  {
+                    "translateY": 50,
+                  },
+                  {
+                    "scale": 0.8,
+                  },
+                ],
+              },
+            }
+          }
+          style={
+            {
+              "height": 80,
+              "position": "absolute",
+              "transform": [
+                {
+                  "translateX": 40,
+                },
+                {
+                  "translateY": 50,
+                },
+                {
+                  "scale": 0.8,
+                },
+              ],
+              "width": 80,
+            }
+          }
+          testID="__CAROUSEL_ITEM_1_READY__"
+        >
+          <RNGestureHandlerButton
+            collapsable={false}
+            delayLongPress={600}
+            enabled={true}
+            exclusive={true}
+            handlerTag={3}
+            handlerType="NativeViewGestureHandler"
+            onGestureEvent={[Function]}
+            onGestureHandlerEvent={[Function]}
+            onGestureHandlerStateChange={[Function]}
+            onHandlerStateChange={[Function]}
+            rippleColor={0}
+            testID="SelectBerry"
+            touchSoundDisabled={false}
+          >
+            <View
+              accessible={true}
+              collapsable={false}
+              style={
+                {
+                  "height": "100%",
+                  "opacity": 1,
+                  "width": "100%",
+                }
+              }
+            >
+              <View
+                style={
+                  [
+                    {
+                      "display": "flex",
+                    },
+                    {
+                      "flexBasis": "0%",
+                      "flexGrow": 1,
+                      "flexShrink": 1,
+                    },
+                    {
+                      "paddingBottom": 2,
+                      "paddingLeft": 2,
+                      "paddingRight": 2,
+                      "paddingTop": 2,
+                    },
+                    {
+                      "borderBottomLeftRadius": 9999,
+                      "borderBottomRightRadius": 9999,
+                      "borderTopLeftRadius": 9999,
+                      "borderTopRightRadius": 9999,
+                    },
+                    {
+                      "backgroundColor": "#f3f4f6",
+                    },
+                    {
+                      "justifyContent": "center",
+                    },
+                    {
+                      "alignItems": "center",
+                    },
+                    {
+                      "overflow": "hidden",
+                    },
+                  ]
+                }
+              >
+                <View
+                  style={
+                    [
+                      {
+                        "overflow": "hidden",
+                      },
+                      [
+                        {
+                          "width": "100%",
+                        },
+                        {
+                          "height": "100%",
+                        },
+                      ],
+                    ]
+                  }
+                >
+                  <FastImageView
+                    defaultSource={
+                      {
+                        "testUri": "../../../app/assets/images/berry.png",
+                      }
+                    }
+                    resizeMode="cover"
+                    style={
+                      {
+                        "bottom": 0,
+                        "left": 0,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                      }
+                    }
+                  />
+                </View>
+              </View>
+            </View>
+          </RNGestureHandlerButton>
+        </View>
+        <View
+          collapsable={false}
+          jestAnimatedStyle={
+            {
+              "value": {
+                "transform": [
+                  {
+                    "translateX": 110,
+                  },
+                  {
+                    "translateY": 75,
+                  },
+                  {
+                    "scale": 0.7000000000000002,
+                  },
+                ],
+              },
+            }
+          }
+          style={
+            {
+              "height": 80,
+              "position": "absolute",
+              "transform": [
+                {
+                  "translateX": 110,
+                },
+                {
+                  "translateY": 75,
+                },
+                {
+                  "scale": 0.7000000000000002,
+                },
+              ],
+              "width": 80,
+            }
+          }
+          testID="__CAROUSEL_ITEM_2_READY__"
+        >
+          <RNGestureHandlerButton
+            collapsable={false}
+            delayLongPress={600}
+            enabled={true}
+            exclusive={true}
+            handlerTag={4}
+            handlerType="NativeViewGestureHandler"
+            onGestureEvent={[Function]}
+            onGestureHandlerEvent={[Function]}
+            onGestureHandlerStateChange={[Function]}
+            onHandlerStateChange={[Function]}
+            rippleColor={0}
+            testID="SelectBerry"
+            touchSoundDisabled={false}
+          >
+            <View
+              accessible={true}
+              collapsable={false}
+              style={
+                {
+                  "height": "100%",
+                  "opacity": 1,
+                  "width": "100%",
+                }
+              }
+            >
+              <View
+                style={
+                  [
+                    {
+                      "display": "flex",
+                    },
+                    {
+                      "flexBasis": "0%",
+                      "flexGrow": 1,
+                      "flexShrink": 1,
+                    },
+                    {
+                      "paddingBottom": 2,
+                      "paddingLeft": 2,
+                      "paddingRight": 2,
+                      "paddingTop": 2,
+                    },
+                    {
+                      "borderBottomLeftRadius": 9999,
+                      "borderBottomRightRadius": 9999,
+                      "borderTopLeftRadius": 9999,
+                      "borderTopRightRadius": 9999,
+                    },
+                    {
+                      "backgroundColor": "#f3f4f6",
+                    },
+                    {
+                      "justifyContent": "center",
+                    },
+                    {
+                      "alignItems": "center",
+                    },
+                    {
+                      "overflow": "hidden",
+                    },
+                  ]
+                }
+              >
+                <View
+                  style={
+                    [
+                      {
+                        "overflow": "hidden",
+                      },
+                      [
+                        {
+                          "width": "100%",
+                        },
+                        {
+                          "height": "100%",
+                        },
+                      ],
+                    ]
+                  }
+                >
+                  <FastImageView
+                    defaultSource={
+                      {
+                        "testUri": "../../../app/assets/images/berry.png",
+                      }
+                    }
+                    resizeMode="cover"
+                    style={
+                      {
+                        "bottom": 0,
+                        "left": 0,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                      }
+                    }
+                  />
+                </View>
+              </View>
+            </View>
+          </RNGestureHandlerButton>
+        </View>
+        <View
+          collapsable={false}
+          jestAnimatedStyle={
+            {
+              "value": {
+                "transform": [
+                  {
+                    "translateX": -120,
+                  },
+                  {
+                    "translateY": 50,
+                  },
+                  {
+                    "scale": 0.8,
+                  },
+                ],
+              },
+            }
+          }
+          style={
+            {
+              "height": 80,
+              "position": "absolute",
+              "transform": [
+                {
+                  "translateX": -120,
+                },
+                {
+                  "translateY": 50,
+                },
+                {
+                  "scale": 0.8,
+                },
+              ],
+              "width": 80,
+            }
+          }
+          testID="__CAROUSEL_ITEM_3_READY__"
+        >
+          <RNGestureHandlerButton
+            collapsable={false}
+            delayLongPress={600}
+            enabled={true}
+            exclusive={true}
+            handlerTag={5}
+            handlerType="NativeViewGestureHandler"
+            onGestureEvent={[Function]}
+            onGestureHandlerEvent={[Function]}
+            onGestureHandlerStateChange={[Function]}
+            onHandlerStateChange={[Function]}
+            rippleColor={0}
+            testID="SelectBerry"
+            touchSoundDisabled={false}
+          >
+            <View
+              accessible={true}
+              collapsable={false}
+              style={
+                {
+                  "height": "100%",
+                  "opacity": 1,
+                  "width": "100%",
+                }
+              }
+            >
+              <View
+                style={
+                  [
+                    {
+                      "display": "flex",
+                    },
+                    {
+                      "flexBasis": "0%",
+                      "flexGrow": 1,
+                      "flexShrink": 1,
+                    },
+                    {
+                      "paddingBottom": 2,
+                      "paddingLeft": 2,
+                      "paddingRight": 2,
+                      "paddingTop": 2,
+                    },
+                    {
+                      "borderBottomLeftRadius": 9999,
+                      "borderBottomRightRadius": 9999,
+                      "borderTopLeftRadius": 9999,
+                      "borderTopRightRadius": 9999,
+                    },
+                    {
+                      "backgroundColor": "#f3f4f6",
+                    },
+                    {
+                      "justifyContent": "center",
+                    },
+                    {
+                      "alignItems": "center",
+                    },
+                    {
+                      "overflow": "hidden",
+                    },
+                  ]
+                }
+              >
+                <View
+                  style={
+                    [
+                      {
+                        "overflow": "hidden",
+                      },
+                      [
+                        {
+                          "width": "100%",
+                        },
+                        {
+                          "height": "100%",
+                        },
+                      ],
+                    ]
+                  }
+                >
+                  <FastImageView
+                    defaultSource={
+                      {
+                        "testUri": "../../../app/assets/images/berry.png",
+                      }
+                    }
+                    resizeMode="cover"
+                    style={
+                      {
+                        "bottom": 0,
+                        "left": 0,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                      }
+                    }
+                  />
+                </View>
+              </View>
+            </View>
+          </RNGestureHandlerButton>
+        </View>
+      </View>
+    </View>
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "backgroundColor": "#9ca3af",
+          "borderBottomColor": "#6b7280",
+          "borderBottomLeftRadius": 9999,
+          "borderBottomRightRadius": 9999,
+          "borderBottomWidth": 1,
+          "borderLeftColor": "#6b7280",
+          "borderLeftWidth": 1,
+          "borderRightColor": "#6b7280",
+          "borderRightWidth": 1,
+          "borderTopColor": "#6b7280",
+          "borderTopLeftRadius": 9999,
+          "borderTopRightRadius": 9999,
+          "borderTopWidth": 1,
+          "left": -17,
+          "opacity": 1,
+          "paddingBottom": 4,
+          "paddingLeft": 4,
+          "paddingRight": 4,
+          "paddingTop": 4,
+          "position": "absolute",
+          "top": -34,
+        }
+      }
+      testID="CloseBerriesButton"
+    >
+      <Text
+        allowFontScaling={false}
+        selectable={false}
+        style={
+          [
+            {
+              "color": undefined,
+              "fontSize": 24,
+            },
+            undefined,
+            {
+              "fontFamily": "anticon",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            {},
+          ]
+        }
+      >
+        
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`PokemonBerries renders PokemonBerries with no ownedId correctly 1`] = `<View />`;

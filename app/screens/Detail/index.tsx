@@ -13,7 +13,7 @@ import {BerryData, PokemonData} from '@/definitions/usecases/pokemon';
 function Detail() {
   const {
     data,
-    navigation,
+    closePokemon,
     iChooseU,
     deletePokemon,
     berries,
@@ -42,9 +42,10 @@ function Detail() {
         blurRadius={10}>
         <View className="flex-1 flex flex-col basis-11/12">
           <IconButton
+            testID="DetailBackButton"
             className="rounded-full bg-gray-400 p-1 absolute right-0 top-3 border border-gray-500"
             iconName="close"
-            onPress={() => navigation.goBack()}
+            onPress={closePokemon}
           />
 
           <View className="grow">

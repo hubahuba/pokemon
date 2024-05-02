@@ -72,10 +72,8 @@ const PokemonBerries = memo(function PokemonBerries({
 
   return (
     <Animated.View
-      onLayout={event => {
-        const {width} = event.nativeEvent.layout;
-        setViewWidth(width);
-      }}
+      testID="PokemonBerriesWrapper"
+      onLayout={event => setViewWidth(event.nativeEvent.layout.width)}
       entering={FadeInUp}
       exiting={FadeOutDown}>
       <GestureHandlerRootView>
@@ -92,13 +90,15 @@ const PokemonBerries = memo(function PokemonBerries({
           renderItem={({item}) => (
             <BerryButton
               item={item}
-              onSelectBerry={onSelectBerry}
+              onPress={onSelectBerry}
               ownedId={ownedId}
+              testID="SelectBerry"
             />
           )}
           customAnimation={animationStyle}
         />
         <IconButton
+          testID="CloseBerriesButton"
           className="absolute rounded-full bg-gray-400 p-1 border border-gray-500"
           style={{
             top: viewWidth / 2 - iconSize,

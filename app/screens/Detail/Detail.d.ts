@@ -6,6 +6,7 @@ export interface DetailViewModelProps {
   data: PokemonData;
   navigation: StackNavigation;
   iChooseU: (data: PokemonData) => void;
+  closePokemon: () => void;
   deletePokemon: () => void;
   berries?: BerryData[] | string;
   feedPokemon: (ownedId: string, berry: BerryData) => void;
