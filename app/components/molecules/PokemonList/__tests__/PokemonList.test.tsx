@@ -34,7 +34,7 @@ describe('PokemonBerries', () => {
     await waitFor(() => expect(mockPressCard.mock.calls.length).toBe(1));
   });
 
-  test('PokemonList scrooled card', async () => {
+  test('PokemonList scrolled card', async () => {
     const list = screen.getByTestId('PokemonListContainer');
     await act(async () => {
       fireEvent(list, 'onEndReached');
