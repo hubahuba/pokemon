@@ -6,43 +6,7 @@ import {QueryClient, QueryClientProvider} from '@tanstack/react-query';
 import {PokemonData} from '@/definitions/usecases/pokemon';
 import Mmkv from '@/adapters/mmkv';
 import {dataBerry} from '@/__mocks__/constanta';
-
-jest.mock('@react-navigation/native', () => {
-  return {
-    useNavigation: () => ({
-      navigate: jest.fn(),
-      dispatch: jest.fn(),
-    }),
-    useRoute: () => ({
-      params: {
-        data: {
-          id: 1,
-          name: 'pokemon',
-          baseWeight: 30,
-          currentWeight: 30,
-          maxWeight: 30,
-          image: 'image',
-          lastEat: 'soft',
-          stats: [],
-          nextEvolution: [
-            {
-              id: 2,
-              name: 'pokemon 2',
-              baseWeight: 60,
-              currentWeight: 60,
-              maxWeight: 90,
-              image: 'image',
-              lastEat: '',
-              order: 2,
-              stats: [],
-              evolutions: [],
-            },
-          ],
-        },
-      },
-    }),
-  };
-});
+import {mockGoBack} from '../../../../jest.setup';
 
 describe('Detail view-model', () => {
   const queryClient = new QueryClient({
@@ -115,6 +79,14 @@ describe('Detail view-model', () => {
       checkNext = JSON.parse(checkNext as string);
       const thePokemon = (checkNext as PokemonData[])[0];
       expect(thePokemon.name).toEqual('pokemon 2');
+    });
+  });
+
+  test('viewModel check closePokemon', async () => {
+    const {result} = renderHook(() => ViewModel(), {wrapper});
+    result.current.closePokemon();
+    await waitFor(() => {
+      expect(mockGoBack.mock.calls.length).toBe(1);
     });
   });
 });

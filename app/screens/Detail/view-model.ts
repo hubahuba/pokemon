@@ -12,7 +12,7 @@ export default function ViewModel(): DetailViewModelProps {
   const [showBerry, setShowBerry] = useState(false);
   const {data} = route.params;
 
-  const berries = services.useCase.pokemon.getBerries();
+  const berries = services.useCase.pokemon.useBerries();
 
   const iChooseU = () => {
     const newData = services.useCase.gameAction.iChooseYou(data);

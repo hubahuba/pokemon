@@ -1,14 +1,14 @@
 import 'react-native-gesture-handler/jestSetup';
-import {dataPokemon} from '@/__mocks__/constanta';
 require('react-native-reanimated').setUpTests();
 
 jest.mock('react-native/Libraries/EventEmitter/NativeEventEmitter');
 
+const mockRecordError = jest.fn();
+const mockLog = jest.fn();
 jest.mock('@react-native-firebase/crashlytics', () => {
   return () => ({
-    log: jest.fn(),
-    recordError: jest.fn(),
-    // Any function you want to use or mock
+    log: mockLog,
+    recordError: mockRecordError,
   });
 });
 
@@ -20,13 +20,16 @@ jest.mock('@react-native-firebase/analytics', () => () => {
   };
 });
 
+export const mockNavigate = jest.fn();
+export const mockGoBack = jest.fn();
+export const mockReset = jest.fn();
 jest.mock('@react-navigation/native', () => {
   return {
+    useIsFocused: jest.fn(() => true),
     useNavigation: () => ({
-      navigate: jest.fn(),
-      dispatch: jest.fn(),
-      goBack: jest.fn(),
-      reset: jest.fn(),
+      navigate: mockNavigate,
+      goBack: mockGoBack,
+      reset: mockReset,
     }),
     useRoute: () => ({
       params: {
